@@ -1,729 +1,1436 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>RBD PYTANIA I ODPOWIEDZI</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: 20px auto;
-    line-height: 1.5;
-    background: #f9f9f9;
-    padding: 15px 25px;
-    color: #222;
-  }
-  h1 {
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  .question {
-    margin-top: 1.4em;
-    font-weight: bold;
-  }
-  ul.answers {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 0.4em;
-  }
-  ul.answers li {
-    margin: 0.3em 0;
-    padding-left: 0.6em;
-  }
-  ul.answers li.correct {
-    color: green;
-    font-weight: bold;
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>apbdegz — konwersja PDF → HTML</title>
+  <style>
+    :root { --maxw: 980px; --pad: 1.25rem; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      line-height: 1.45;
+      color: #111;
+      background: #fff;
+    }
+    header {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: var(--pad) var(--pad) 0 var(--pad);
+    }
+    header h1 { font-size: 1.15rem; font-weight: 600; margin: 0 0 .25rem 0; }
+    header p { margin: 0; color: #555; font-size: .95rem; }
+    main {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: var(--pad);
+    }
+    .paper {
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      box-shadow: 0 8px 26px rgba(0,0,0,.06);
+      background: #fff;
+      overflow: hidden;
+    }
+    .content {
+      padding: 1.25rem 1.25rem;
+    }
+    pre {
+      white-space: pre-wrap;        /* wrap long lines but keep newlines */
+      word-wrap: break-word;
+      margin: 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.95rem;
+      tab-size: 4;
+    }
+    /* Optional: make bullet-like characters hang for nicer reading */
+    pre::first-line { font-variant-ligatures: none; }
+  </style>
 </head>
 <body>
-<h1>RBD - Pytania i odpowiedzi</h1>
-
-<div class="question">1. Instrukcja SELECT służy do:</div>
-<ul class="answers">
-  <li class="correct">a) sprowadzania rekordów z bazy danych</li>
-  <li>b) wstawiania rekordów do bazy danych</li>
-  <li>c) usuwania rekordów z bazy danych</li>
-  <li>d) aktualizacji rekordów w bazie danych</li>
-</ul>
-
-<div class="question">2. Instrukcja INSERT służy do:</div>
-<ul class="answers">
-  <li>a) sprowadzania rekordów z bazy danych</li>
-  <li class="correct">b) wstawiania rekordów do bazy danych</li>
-  <li>c) usuwania rekordów z bazy danych</li>
-  <li>d) aktualizacji rekordów w bazie danych</li>
-</ul>
-
-<div class="question">3. Instrukcja DELETE służy do:</div>
-<ul class="answers">
-  <li>a) sprowadzania rekordów z bazy danych</li>
-  <li>b) wstawiania rekordów do bazy danych</li>
-  <li class="correct">c) usuwania rekordów z bazy danych</li>
-  <li>d) aktualizacji rekordów w bazie danych</li>
-</ul>
-
-<div class="question">4. Instrukcja UPDATE służy do:</div>
-<ul class="answers">
-  <li>a) sprowadzania rekordów z bazy danych</li>
-  <li>b) wstawiania rekordów do bazy danych</li>
-  <li>c) usuwania rekordów z bazy danych</li>
-  <li class="correct">d) aktualizacji rekordów w bazie danych</li>
-</ul>
-
-<div class="question">5. INDEKS w bazie danych przyśpiesza:</div>
-<ul class="answers">
-  <li class="correct">a) wyszukiwania rekordów w bazie danych</li>
-  <li>b) wstawiania rekordów do bazy danych</li>
-  <li>c) usuwania rekordów z bazy danych</li>
-  <li>d) autoryzację użytkowników w bazie danych</li>
-</ul>
-
-<div class="question">6. Instrukcja COMMIT służy do:</div>
-<ul class="answers">
-  <li>a) wycofywania zmian w bazie danych</li>
-  <li>b) wstawiania rekordów do bazy danych</li>
-  <li class="correct">c) zatwierdzania zmian w bazie danych</li>
-  <li>d) aktualizacji rekordów w bazie danych</li>
-</ul>
-
-<div class="question">7. Instrukcja ROLLBACK służy do:</div>
-<ul class="answers">
-  <li class="correct">a) wycofywania zmian w bazie danych</li>
-  <li>b) zatwierdzania zmian w bazie danych</li>
-  <li>c) usuwania rekordów z bazy danych</li>
-  <li>d) aktualizacji rekordów w bazie danych</li>
-</ul>
-
-<div class="question">8. Instrukcja GRANT służy do</div>
-<ul class="answers">
-  <li class="correct">a) przyznawania uprawnień w bazie danych</li>
-  <li>b) zatwierdzania zmian w bazie danych</li>
-  <li>c) odbierania uprawnień w bazie danych</li>
-  <li>d) aktualizacji rekordów w bazie danych</li>
-</ul>
-
-<div class="question">10. Instrukcja ALTER TABLE służy do:</div>
-<ul class="answers">
-  <li>a) tworzenia tabeli</li>
-  <li>b) usuwania tabeli</li>
-  <li class="correct">c) zmiany schematu tabeli</li>
-  <li>d) aktualizacji indeksów założonych na tabeli</li>
-</ul>
-
-<div class="question">11. Jaka jest wartość wyrażenia Null=Null:</div>
-<ul class="answers">
-  <li class="correct">a) jest nieokreślone</li>
-  <li>b) True</li>
-  <li>c) False</li>
-  <li>d) Null</li>
-</ul>
-
-<div class="question">12. Jaka jest wartość wyrażenia True OR Null:</div>
-<ul class="answers">
-  <li>a) jest nieokreślone</li>
-  <li class="correct">b) True</li>
-  <li>c) False</li>
-  <li>d) Null</li>
-</ul>
-
-<div class="question">13. Jaka jest wartość wyrażenia False OR Null:</div>
-<ul class="answers">
-  <li>a) jest nieokreślone</li>
-  <li>b) True</li>
-  <li>c) False</li>
-  <li class="correct">d) Null</li>
-</ul>
-
-<div class="question">14. Jaka jest wartość wyrażenia False AND Null:</div>
-<ul class="answers">
-  <li>a) jest nieokreślone</li>
-  <li>b) True</li>
-  <li class="correct">c) False</li>
-  <li>d) Null</li>
-</ul>
-
-<div class="question">15. Jaka jest wartość wyrażenia True AND Null:</div>
-<ul class="answers">
-  <li>a) jest nieokreślone</li>
-  <li>b) True</li>
-  <li>c) False</li>
-  <li class="correct">d) Null</li>
-</ul>
-
-<div class="question">16. Jaka jest wartość wyrażenia NOT Null:</div>
-<ul class="answers">
-  <li>a) jest nieokreślone</li>
-  <li>b) True</li>
-  <li>c) False</li>
-  <li class="correct">d) Null</li>
-</ul>
-
-<div class="question">17. Co będzie wynikiem realizacji instrukcji SELECT * FROM Emp WHERE EmpNo=EmpNo OR EmpNo=NULL</div>
-<ul class="answers">
-  <li class="correct">a) relacja Emp</li>
-  <li>b) relacja pusta</li>
-  <li>c) instrukcja jest niepoprawna</li>
-</ul>
-
-<div class="question">18. Co będzie wynikiem realizacji instrukcji SELECT * FROM Emp WHERE EmpNo=EmpNo AND NULL=EmpNo</div>
-<ul class="answers">
-  <li>a) relacja Emp</li>
-  <li class="correct">b) relacja pusta</li>
-  <li>c) instrukcja jest niepoprawna</li>
-</ul>
-
-<div class="question">19. Relacja R ma atrybut a. Jaka liczba może być wynikiem wykonania instrukcji SELECT Count(*) FROM R WHERE a=a</div>
-<ul class="answers">
-  <li>a) 0</li>
-  <li>b) 1</li>
-  <li>c) dowolna liczba całkowita</li>
-  <li class="correct">d) zawsze tyle jaka jest liczebność relacji R.</li>
-</ul>
-
-<div class="question">20. Relacja R ma atrybut a. Jaka liczba może być wynikiem wykonania instrukcji SELECT Count(*) FROM R WHERE a<a</div>
-<ul class="answers">
-  <li class="correct">a) zawsze 0</li>
-  <li>b) 1</li>
-  <li>c) dowolna liczba całkowita</li>
-  <li>d) tyle jaka jest liczebność relacji R.</li>
-</ul>
-
-<div class="question">1. Encji odpowiada w relacyjnej bazie danych:</div>
-<ul class="answers">
-  <li>a) wiersz w tabeli</li>
-  <li>b) kolumna w tabeli</li>
-  <li class="correct">c) tabela</li>
-  <li>d) klucz obcy</li>
-</ul>
-
-<div class="question">2. Związkowi jednoznacznemu odpowiada w relacyjnej bazie danych:</div>
-<ul class="answers">
-  <li>a) kolumna w tabeli</li>
-  <li class="correct">b) klucz obcy</li>
-  <li>c) indeks w tabeli</li>
-  <li>d) wartość NULL</li>
-</ul>
-
-<div class="question">3. Związkowi wieloznacznemu odpowiada w relacyjnej bazie danych:</div>
-<ul class="answers">
-  <li>a) klucz obcy</li>
-  <li class="correct">b) tabela</li>
-  <li>c) kolumna w tabeli</li>
-  <li>d) wiersz w tabeli</li>
-</ul>
-
-<div class="question">4. Atrybutowi w relacyjnej bazie danych odpowiada:</div>
-<ul class="answers">
-  <li class="correct">a) kolumna w tabeli</li>
-  <li>b) wiersz w tabeli</li>
-  <li>c) tabela</li>
-  <li>d) indeks w tabeli</li>
-</ul>
-
-<div class="question">5. Jednoznacznemu identyfikatorowi odpowiada w relacyjnej bazie danych:</div>
-<ul class="answers">
-  <li>a) kolumna w tabeli</li>
-  <li>b) indeks w tabeli</li>
-  <li>c) klucz obcy</li>
-  <li class="correct">d) klucz główny</li>
-</ul>
-
-<div class="question">6. Spójność referencyjna dotyczy faktu:</div>
-<ul class="answers">
-  <li class="correct">a) wartością klucza obcego może być null lub wartość odpowiadającego mu klucza głównego</li>
-  <li>b) wartości w kolumnie nie powtarzają się</li>
-  <li>c) wartości w kolumnie nie mogą zależeć ani od części klucza ani nawet przechodnio od klucza</li>
-  <li>d) w każdej tabeli powinien istnieć dokładnie jeden klucz</li>
-</ul>
-
-<div class="question">7. III postać normalna dotyczy faktu:</div>
-<ul class="answers">
-  <li>a) wartością klucza obcego może być null lub wartość odpowiadającego mu klucza głównego</li>
-  <li>b) wartości w kolumnie nie powtarzają się</li>
-  <li class="correct">c) wartości w kolumnie niekluczowej nie mogą zależeć ani od części klucza ani nawet przechodnio od klucza</li>
-  <li>d) w każdej tabeli powinien istnieć dokładnie jeden klucz</li>
-</ul>
-
-<div class="question">8. Które ze sformułowań są prawdziwe w modelu relacyjnym:</div>
-<ul class="answers">
-  <li>a) wartości w kolumnie są przechowywane w kolejności posortowanej</li>
-  <li class="correct">b) wiersze nie powtarzają się</li>
-  <li class="correct">c) kolejność kolumn jest nieistotna</li>
-  <li>d) wartości w kolumnie nie powtarzają się</li>
-</ul>
-
-<div class="question">9. Które ze sformułowań są prawdziwe w modelu relacyjnym:</div>
-<ul class="answers">
-  <li class="correct">a) wiersze nie mają tożsamości obiektowej</li>
-  <li class="correct">b) związek jednoznaczny reprezentuje się przy pomocy klucza obcego</li>
-  <li>c) związek wieloznaczny reprezentuje się przy pomocy klucza obcego</li>
-  <li>d) klucze obce muszą być typu całkowitego</li>
-</ul>
-
-<div class="question">10. Które ze sformułowań są prawdziwe w modelu relacyjnym:</div>
-<ul class="answers">
-  <li class="correct">a) tabela jest konkretną reprezentacją relacji</li>
-  <li class="correct">b) dla klucza jednoznacznego jest automatycznie zakładany indeks</li>
-  <li>c) dla klucza obcego jest automatycznie zakładany indeks</li>
-  <li class="correct">d) dla klucza głównego jest automatycznie zakładany indeks jednoznaczny</li>
-</ul>
-
-<div class="question">11. Które ze sformułowań są prawdziwe w modelu relacyjnym:</div>
-<ul class="answers">
-  <li>a) klucz obcy nie może być częścią klucza głównego</li>
-  <li class="correct">b) klucz główny nie może być częścią klucza obcego</li>
-  <li class="correct">c) wartości klucza głównego nie mogą się powtarzać</li>
-  <li>d) wartości klucza obcego nie mogą się powtarzać</li>
-</ul>
-
-<div class="question">12. Zależność złączeniowa jest uogólnieniem zależności wielowartościowej w następującym sensie:</div>
-<ul class="answers">
-  <li>a) dotyczy rozbicia tabeli na dokładnie dwie tabele,</li>
-  <li>b) dotyczy rozbicia tabeli na dokładnie trzy tabele,</li>
-  <li>c) dotyczy rozbicia tabeli na więcej niż dwie tabele,</li>
-  <li class="correct">d) dotyczy rozbicia tabeli na co najmniej dwie tabele,</li>
-</ul>
-
-<div class="question">13. Postać normalna Boyce’a-Codda dotyczy faktu:</div>
-<ul class="answers">
-  <li>a) wartością klucza obcego może być null lub wartość odpowiadającego mu klucza głównego</li>
-  <li class="correct">b) każda nietrywialna zależność funkcyjna jest zależnością od nadklucza,</li>
-  <li>c) wartości w kolumnie niekluczowej nie mogą zależeć ani od części klucza ani nawet przechodnio od klucza</li>
-  <li>d) w każdej tabeli powinien istnieć dokładnie jeden klucz</li>
-</ul>
-
-<div class="question">14. Które z poniższych stwierdzeń są prawdziwe:</div>
-<ul class="answers">
-  <li class="correct">a) jedyną poprawną, nietrywialną zależnością funkcyjną jest zależność do klucza,</li>
-  <li>b) należy starać się użyć najmniejszej możliwej liczby tabel,</li>
-  <li class="correct">c) w tabeli nie powinno być żadnych niekontrolowanych redundancji,</li>
-  <li>d) należy wszystkie związki jednoznaczne zastąpić związkami jednojednoznacznymi.</li>
-</ul>
-
-<div class="question">15. Które z poniższych stwierdzeń są prawdziwe:</div>
-<ul class="answers">
-  <li class="correct">a) każdy fakt przechowywany w bazie danych powinien być w niej wyrażany tylko na jeden sposób,</li>
-  <li>b) należy starać się użyć najmniejszej możliwej liczby tabel,</li>
-  <li class="correct">c) należy skonsultować z użytkownikiem poprawność skonstruowanego modelu danych,</li>
-  <li>d) należy spytać się użytkownika czy schemat tabel jest w III postaci normalnej.</li>
-</ul>
-
-<div class="question">16. Dany jest schemat relacyjny R={Miasto, Ulica, Kod}, F = {Miasto,Ulica->Kod; Kod->Miasto}. W której postaci normalnej jest ten schemat:</div>
-<ul class="answers">
-  <li>a) I postać normalna;</li>
-  <li class="correct">b) II postać normalna,</li>
-  <li>c) III postać normalna,</li>
-  <li>d) postać normalna Boyce’a-Codda.</li>
-</ul>
-
-<div class="question">17. Dany jest schemat relacyjny R={Miasto, Ulica, Kod, Poczta}, F = {Miasto,Ulica->Kod; Kod->Miasto; Kod->Poczta}. W której postaci normalnej jest ten schemat:</div>
-<ul class="answers">
-  <li class="correct">a) I postać normalna;</li>
-  <li>b) II postać normalna,</li>
-  <li>c) III postać normalna,</li>
-  <li>d) postać normalna Boyce’a-Codda.</li>
-</ul>
-
-<div class="question">18. Dany jest schemat relacyjny R={Miasto, Ulica, Kod, Poczta}, F = {Miasto,Ulica->Kod; Kod->Poczta}. W której postaci normalnej jest ten schemat::</div>
-<ul class="answers">
-  <li>a) I postać normalna;</li>
-  <li class="correct">b) II postać normalna,</li>
-  <li>c) III postać normalna,</li>
-  <li>d) postać normalna Boyce’a-Codda.</li>
-</ul>
-
-<div class="question">19. Dany jest schemat relacyjny R={Miasto, Ulica, Kod}, F = {Miasto,Ulica->Kod}. W której postaci normalnej jest ten schemat:</div>
-<ul class="answers">
-  <li>a) I postać normalna;</li>
-  <li>b) II postać normalna,</li>
-  <li>c) III postać normalna,</li>
-  <li class="correct">d) postać normalna Boyce’a-Codda.</li>
-</ul>
-
-<div class="question">20. Dany jest schemat relacyjny R={Ulica, Kod, Sklep}, F = {Ulica->Kod; Sklep->Ulica}. W której postaci normalnej jest ten schemat::</div>
-<ul class="answers">
-  <li>a) I postać normalna;</li>
-  <li class="correct">b) II postać normalna,</li>
-  <li>c) III postać normalna,</li>
-  <li>d) postać normalna Boyce’a-Codda.</li>
-</ul>
-
-<div class="question">21. Dany jest schemat relacyjny R={Ulica, Kod, Sklep}, F = {Ulica->Kod; Ulica, Numer ->Sklep}. W której postaci normalnej jest ten schemat:</div>
-<ul class="answers">
-  <li class="correct">a) I postać normalna;</li>
-  <li>b) II postać normalna,</li>
-  <li>c) III postać normalna,</li>
-  <li>d) postać normalna Boyce’a-Codda.</li>
-</ul>
-
-<div class="question">22. Dany jest schemat relacyjny R={Student,Adres,Akademik}, F = {Student->Adres; Akademik->Adres; Student->Akademik}. W której postaci normalnej jest ten schemat:</div>
-<ul class="answers">
-  <li>a) I postać normalna;</li>
-  <li class="correct">b) II postać normalna,</li>
-  <li>c) III postać normalna,</li>
-  <li>d) postać normalna Boyce’a-Codda.</li>
-</ul>
-
-<div class="question">23. Dany jest schemat relacyjny R={Student,Uczelnia,Adres,Klub}, F = {Student->Uczelnia; Klub->Adres}. W której postaci normalnej jest ten schemat:</div>
-<ul class="answers">
-  <li class="correct">a) I postać normalna;</li>
-  <li>b) II postać normalna,</li>
-  <li>c) III postać normalna,</li>
-  <li>d) postać normalna Boyce’a-Codda.</li>
-</ul>
-
-<div class="question">24. Dany jest schemat relacyjny R={Student,Uczelnia,Adres,Klub}, F = {Student->Uczelnia; Klub->Adres; Uczelnia->Adres}. W której postaci normalnej jest ten schemat:</div>
-<ul class="answers">
-  <li class="correct">a) I postać normalna;</li>
-  <li>b) II postać normalna,</li>
-  <li>c) III postać normalna,</li>
-  <li>d) postać normalna Boyce’a-Codda.</li>
-</ul>
-
-<div class="question">25. Dany jest schemat relacyjny R={Student,Uczelnia,Adres,Akademik}, F = {Student, Uczelnia->Klub; Klub->Adres}. W której postaci normalnej jest ten schemat:</div>
-<ul class="answers">
-  <li>a) I postać normalna;</li>
-  <li class="correct">b) II postać normalna,</li>
-  <li>c) III postać normalna,</li>
-  <li>d) postać normalna Boyce’a-Codda.</li>
-</ul>
-
-<div class="question">1. Które ze sformułowań są prawdziwe dla związku nieidentyfikującego w Erwinie:</div>
-<ul class="answers">
-  <li>a) jest oznaczany za pomocą rombu po stronie „jeden”</li>
-  <li class="correct">b) nie wchodzi w skład jednoznacznego identyfikatora encji po stronie „wiele”</li>
-  <li class="correct">c) jest oznaczany linią przerywaną</li>
-  <li>d) jest oznaczany linią ciągłą</li>
-</ul>
-
-<div class="question">2. Które sformułowania są prawdziwe dla związku identyfikującego w Erwinie:</div>
-<ul class="answers">
-  <li>a) jest oznaczany za pomocą litery P po stronie „jeden”</li>
-  <li class="correct">b) wchodzi w skład jednoznacznego identyfikatora encji po stronie „wiele”</li>
-  <li>c) jest oznaczany linią przerywaną</li>
-  <li class="correct">d) jest oznaczany linią ciągłą</li>
-</ul>
-
-<div class="question">3. Więzy referencyjne dotyczą w Erwinie:</div>
-<ul class="answers">
-  <li>a) zależności wartości atrybutu od klucza</li>
-  <li class="correct">b) wykonywania operacji INSERT, DELETE i UPDATE na powiązanych rekordach</li>
-  <li>c) wiązania wartości zmiennej podstawienia w czasie kompilacji</li>
-  <li class="correct">d) używania odnośników dla kolumn kluczy obcych</li>
-</ul>
-
-<div class="question">4. W Erwinie czarne kółko stawia się na linii związku:</div>
-<ul class="answers">
-  <li>a) jednojednoznacznego</li>
-  <li>b) jednoznacznego</li>
-  <li>c) wieloznacznego</li>
-  <li class="correct">d) podkategorii</li>
-</ul>
-
-<div class="question">5) W Erwinie encja niezależna to:</div>
-<ul class="answers">
-  <li>a) encja niepołączona związkami z żadnymi innymi encjami</li>
-  <li class="correct">b) encja, której jednoznaczny identyfikator nie zawiera klucza obcego</li>
-  <li>c) encja, której wszystkie związki są nieidentyfikujące</li>
-  <li>d) encja, której jeden ze związków jest identyfikujący.</li>
-</ul>
-
-<div class="question">6) W Erwinie encja zależna to:</div>
-<ul class="answers">
-  <li class="correct">a) encja, której jednoznaczny identyfikator zawiera przy najmniej jeden klucz obcy</li>
-  <li>b) encja, której jednoznaczny identyfikator zawiera same klucze obce</li>
-  <li>c) encja, której wszystkie związki są nieidentyfikujące</li>
-  <li class="correct">d) encja, której jeden ze związków jest identyfikujący.</li>
-</ul>
-
-<div class="question">1. Studenci mają pomysły. Każdy pomysł dotyczy pewnej rzeczy. Każdy pomysł przychodzi do głowy dokładnie jednemu studentowi. Student może się podzielić pomysłem z kolegami-studentami. Który ze schematów jest najodpowiedniejszy z punktu widzenia zasad projektowania baz danych:</div>
-<ul class="answers">
-  <li>a) Studenci(id_studenta, imię, nazwisko, adres, id_pomysłu) Pomysły(id_pomysłu, rzecz, opis) Koledzy(id_kolegi, imię, nazwisko, id_studenta, id_pomysłu)</li>
-  <li>b) Studenci(id_studenta, imię, nazwisko, adres, id_kolegi) Pomysły(id_pomysłu, rzecz, opis, id_studenta) Koledzy(id_kolegi, imię, nazwisko, id_studenta, id_pomysłu)</li>
-  <li class="correct">c) Studenci(id_studenta, imię, nazwisko, adres) Pomysły(id_pomysłu, rzecz, opis, id_studenta) Koledzy(id_pomysłu, id_kolegi)</li>
-  <li>d) Studenci(id_studenta, imię, nazwisko, adres) Pomysły(id_pomysłu, rzecz, opis, id_studenta, id_kolegi)</li>
-</ul>
-
-<div class="question">2. Studenci lubią się, są sobie obojętni lub nie znoszą się (nie ma innej możliwości). Który ze schematów jest najodpowiedniejszy z punktu widzenia zasad projektowania baz danych :</div>
-<ul class="answers">
-  <li class="correct">a) Studenci(id_studenta, imię, nazwisko) Koledzy(id_kolegi, imię, nazwisko, id_studenta, id_stosunku_do) Stosunek(id_stosunku_do, stosunek_do)</li>
-  <li>b) Studenci(id_studenta, imię, nazwisko) Koledzy(id_kolegi, imię, nazwisko, id_studenta, stosunek_do)</li>
-  <li>c) Studenci(id_studenta, imię, nazwisko) Lubi(id_studenta, id_kolegi) Nie_znosi(id_studenta, id_kolegi) Obojętny(id_studenta, id_kolegi)</li>
-  <li>d) Studenci(id_studenta, imię, nazwisko) Lubi(id_studenta, id_kolegi) Nie_znosi(id_studenta, id_kolegi)</li>
-</ul>
-
-<div class="question">3. W domach mieszkają zwierzęta domowe. Niektóre zwierzęta zjadają się wzajemnie. Domy mogą być położone obok siebie. Jaki schemat zgodny z zasadami projektowania schematów baz danych jest najodpowiedniejszy dla organizacji zajmującej się ochroną zwierząt:</div>
-<ul class="answers">
-  <li>a) Domy(id_domu, adres, id_zwierzę) Zwierzęta(id_zwierzę, rodzaj, id_zw_zjadane)</li>
-  <li class="correct">b) Domy(id_domu, adres) Zwierzęta(id_zwierzę, id_rodzaju, id_domu) Rodzaje(id_rodzaju, rodzaj) Obok_siebie(id_domu1, id_domu2) Zjada(id_rodz_je, id_rodz_zjadane)</li>
-  <li>c) Domy(id_domu, adres) Zwierzęta(id_zwierzę, id_rodzaju, id_domu) Rodzaje(id_rodzaju, rodzaj) Sąsiedzi(id_zwierzę1, id_zwierzę2) Zjada(id_rodz_je, id_rodz_zjadane)</li>
-  <li>d) Domy(id_domu, adres, id_zwierzę, rodzaj) Obok_siebie(id_domu1, id_domu2) Zjada(id_zw_je, id_zw_zjadane)</li>
-</ul>
-
-<div class="question">4. W filmach grają aktorzy. Każdy film ma dokładnie jednego reżysera i jednego lub więcej scenarzystę. Który z poniższych schematów jest najodpowiedniejszy z punktu widzenia zasad projektowania baz danych:</div>
-<ul class="answers">
-  <li>a) Filmy(id_filmu, tytuł, reżyser, gaża_reżysera) Aktorzy(id_aktora, nazwisko,rola, id_filmu, gaża) Scenarzyści(id_scenarzysty, nazwisko, id_filmu, gaża)</li>
-  <li class="correct">b) Filmy(id_filmu, tytuł, id_reżysera, gaża_reżysera) Osoby(id_osoby, nazwisko) Aktorzy(id_aktora, id_filmu, rola, gaża) Scenarzyści(id_scenarzysty, id_filmu, gaża)</li>
-  <li>c) Filmy(id_filmu, tytuł, id_reżysera) Osoby(id_osoby, nazwisko) Zespół(id_osoby, id_filmu, rola, gaża)</li>
-  <li>d) Zespół(tytuł_filmu, nazwisko_osoby, rola, gaża)</li>
-</ul>
-
-<div class="question">5. Politycy należą do partii politycznych (czasami je zmieniają, czasami dokonują ich podziału). Partie polityczne, przed wyborami, tworzą koalicje wyborcze.  Który z poniższych schematów jest najodpowiedniejszy z punktu widzenia zasad projektowania baz danych:</div>
-<ul class="answers">
-  <li class="correct">a) Politycy(id_polityka, imię, nazwisko) Partie(id_partii, nazwa, od, do) Koalicje(id_koalicji,  data_wyborów) Członkowie(id_partii, id_osoby, od, do) W_koalicji(id_partii, id_koalicji, od, do)</li>
-  <li>b) Osoby(id_osoby, imię, nazwisko, id_partii) Partie(id_partii, nazwa, id_koalicji) Politycy(id_osoby, id_partii, od, do) Koalicje(id_koalicji, data_wyborów)</li>
-  <li>c) Partie(id_partii, nazwa, koalicja, polityk, od, do)</li>
-  <li>d) Politycy(id_polityka, imię, nazwisko, id_partii, od, do) Partie(id_partii, nazwa, od, do) Koalicje(id_koalicji,  data_wyborów) W_koalicji(id_partii, id_koalicji, od, do)</li>
-</ul>
-
-<div class="question">6. Studenci planują, czym chcieliby się zajmować w swojej przyszłej pracy zawodowej i jakie stanowiska chcieliby pełnić. Który z poniższych schematów jest najodpowiedniejszy z punktu widzenia zasad projektowania baz danych:</div>
-<ul class="answers">
-  <li class="correct">a) Studenci(id_studenta, imię, nazwisko) Zajęcia(id_zajęcia, nazwa) Stanowiska(id_stanowiska, nazwa) Kto_co(id_studenta, id_stanowiska, id_zajęcia)</li>
-  <li>b) Studenci(id_studenta, imię, nazwisko, rok) Zajęcia(id_zajęcia, nazwa) Stanowiska(id_stanowiska, nazwa) Jakie_zajęcie(id_studenta, id_zajęcia) Jakie_stanowisko(id_studenta, id_stanowiska)</li>
-  <li>c) Studenci(imię, nazwisko, rok, zajęcie, stanowisko)</li>
-  <li>d) Studenci(id_studenta, imię, nazwisko,rok) Kto_co(id_studenta, stanowisko, zajęcie)</li>
-</ul>
-
-<div class="question">7. W PJWSTK ma powstać baza danych zbierająca informacje o umiejętnościach przydatnych w pracy zawodowej, o przedmiotach, które uczą tych umiejętności oraz o książkach, w których umiejętności są opisane. Który z poniższych schematów jest najodpowiedniejszy z punktu widzenia zasad projektowania baz danych:</div>
-<ul class="answers">
-  <li>a) Umiejętności(umiejętność, przedmiot, książka)</li>
-  <li>b) Przedmioty(id_przedmiotu, nazwa, semestr)Książki(ISBN, tytuł, autorzy)Umiejętności(id_umiejętności, id_przedmiotu, nazwa, opis, ISBN, od_strony, do_strony)</li>
-  <li class="correct">c) Przedmioty(id_przedmiotu, nazwa, semestr)Książki(ISBN, tytuł, sygnatura)Umiejętności(id_umiejętności, nazwa, opis)Gdzie(id_umiejętności, ISBN, od_strony, do_strony)Na(id_umiejętności, id_przedmiotu)</li>
-  <li>d) d)	Przedmioty(id_przedmiotu, nazwa, semestr)Egzemplarze_książek(sygnatura, tytuł, autorzy, nr_półki)Umiejętności(id_umiejętności, nazwa, opis)Gdzie(id_umiejętności, sygnatura, od_strony, do_strony)</li>
-</ul>
-
-<div class="question">8. W PJWSTK powstaje baza danych z informacjami, jakie oprogramowanie jest zainstalowane w poszczególnych salach - z myślą o prowadzeniu w nich ćwiczeń z odpowiednich przedmiotów. Który z poniższych schematów jest najodpowiedniejszy z punktu widzenia zasad projektowania baz danych:</div>
-<ul class="answers">
-  <li>a) Sale(numer_sali, nazwa_programu, wersja, ile_instalacji) Programy(nazwa_programu, wersja, nazwa_przedmiotu)</li>
-  <li class="correct">b) Programy(id_programu, firma, nazwa, wersja) Przedmioty(id_przedmiotu, nazwa) Sale_programy(nr_sali, id_programu,  ile_instalacji) Przedmioty_programy(id_przedmiotu, id_programu)</li>
-  <li>c) Programy(id_programu, firma, nazwa, wersja, nazwa_przedmiotu) Sale_programy(nr_sali, id_programu, wersja, ile_instalacji)</li>
-  <li>d) Sale(id_sali, numer, ile_komputerów) Programy(id_programu, firma, nazwa, wersja) Przedmioty(id_przedmiotu, nazwa) Sale_programy(id_sali, id_programu, wersja, ile_instalacji) Przedmioty_programy(id_przedmiotu, id_programu, wersja)</li>
-</ul>
-
-<div class="question">9. Który ze schematów bazy danych dla biblioteki jest najodpowiedniejszy z punktu widzenia zasad projektowania baz danych. Baza powinna przechowywać informacje o klientach, książkach i wypożyczeniach (wielkie litery oznaczają klucz główny):</div>
-<ul class="answers">
-  <li>a) Klient(ID_KLIENTA, imię, nazwisko, adres) Książka(ID_KSIĄŻKI, tytuł, autor) Wypożyczenie(ID_KLIENTA, id_książki, data_wypożyczenia, data_zwrotu)</li>
-  <li>b) Klient(ID_KLIENTA, imię, nazwisko, adres) Książka(ID_KSIĄŻKI, tytuł, autor) Wypożyczenie(ID_KLIENTA, ID_KSIĄŻKI, data_wypożyczenia, data_zwrotu)</li>
-  <li>c) Klient(ID_KLIENTA, imię, nazwisko, adres) Książka(ID_KSIĄŻKI, tytuł, autor) Wypożyczenie(ID_KLIENTA, ID_KSIĄŻKI, DATA_WYPOŻYCZENIA, data_zwrotu)</li>
-  <li class="correct">d) Klient(ID_KLIENTA, imię, nazwisko, adres) Książka(ID_KSIĄŻKI, tytuł, autor) Wypożyczenie(ID_KLIENTA, ID_KSIĄŻKI, DATA_WYPOŻYCZENIA, DATA_ZWROTU)</li>
-</ul>
-
-<div class="question">10. Potrzebna jest baza danych do ewidencji studentów i ich ocen. Który ze schematów bazy danych jest najodpowiedniejszy z punktu widzenia zasad projektowania baz danych:</div>
-<ul class="answers">
-  <li>a) Student(id_studenta, imię, nazwisko) Ocena(id_oceny, ocena, data_wystawienia, nazwa_przedmiotu)</li>
-  <li class="correct">b) Student(id_studenta, imię, nazwisko) Ocena(id_oceny, ocena, data_wystawienia, id_przedmiotu, id_studenta) Przedmiot(id_przedmiotu, nazwa)</li>
-  <li>c) Student(id_studenta, imię, nazwisko, id_oceny) Ocena(id_oceny, ocena, data_wystawienia, id_przedmiotu) Przedmiot(id_przedmiotu, nazwa)</li>
-  <li>d) Student(id_studenta, imię, nazwisko, ocena) Przedmiot(id_przedmiotu, nazwa, id_studenta)</li>
-</ul>
-
-<div class="question">1. Dana jest tabela Osoby(Imie, Nazwisko, Zarobki). Które z następujących instrukcji są składniowo poprawnymi instrukcjami SQL w Oracle:</div>
-<ul class="answers">
-  <li>a) SELECT Osoby.Nazwisko, Osoby.Imie, Osoby.Zarobki WHERE Osoby.Zarobki >1000;</li>
-  <li>b) INSERT INTO Osoby VALUES (‘Jan’, ‘Kowalski’, 2000) WHERE USER = ‘KOWALSKI’;</li>
-  <li class="correct">c) DELETE FROM Osoby WHERE USER=’KOWALSKI’;</li>
-  <li class="correct">d) UPDATE Osoby SET Nazwisko=USER;</li>
-</ul>
-
-<div class="question">2. Dana jest tabela Osoby(Imie, Nazwisko, Zarobki). Które z następujących instrukcji są składniowo poprawnymi instrukcjami SQL w Oracle:</div>
-<ul class="answers">
-  <li class="correct">a) SELECT Osoby.Nazwisko, Osoby.Imie, Osoby.Zarobki FROM Osoby GROUP BY Osoby.Nazwisko;</li>
-  <li>b) INSERT INTO Osoby VALUES (‘Jan’, ‘Kowalski’, 2000) WHERE USER = ‘KOWALSKI’;</li>
-  <li>c) DELETE FROM Osoby WHERE ‘JANKOWSKI’=’KOWALSKI’;</li>
-  <li class="correct">d) UPDATE Osoby SET Nazwisko=USER;</li>
-</ul>
-
-<div class="question">3. Dana jest tabela Osoby(Imie, Nazwisko, Zarobki). Które z następujących instrukcji są składniowo poprawnymi instrukcjami SQL w Oracle:</div>
-<ul class="answers">
-  <li>a) SELECT Osoby.Nazwisko, Osoby.Imie, Osoby.Zarobki ORDER BY Osoby.Zarobki;</li>
-  <li class="correct">b) INSERT INTO Osoby SELECT * FROM Osoby WHERE USER = ‘KOWALSKI’;</li>
-  <li class="correct">c) DELETE FROM Osoby WHERE USER=’KOWALSKI’;</li>
-  <li>d) UPDATE Osoby WHERE Nazwisko=’KOWALSKI’;</li>
-</ul>
-
-<div class="question">4. Dana jest tabela Osoby(Imie, Nazwisko, Zarobki). Które z następujących instrukcji są składniowo poprawnymi instrukcjami SQL w Oracle:</div>
-<ul class="answers">
-  <li>a) SELECT Osoby.Nazwisko, Osoby.Imie, Osoby.Zarobki HAVING Osoby.Zarobki>1000;</li>
-  <li>b) INSERT INTO Osoby SELECT Nazwisko, Imie FROM Osoby WHERE USER = ‘KOWALSKI’;</li>
-  <li class="correct">c) DELETE FROM Osoby WHERE USER=’KOWALSKI’;</li>
-  <li>d) UPDATE Osoby WHERE Nazwisko=’KOWALSKI’;</li>
-</ul>
-
-<div class="question">5. Dana jest tabela Osoby(Imie, Nazwisko, Zarobki). Które z następujących instrukcji są składniowo poprawnymi instrukcjami SQL w Oracle:</div>
-<ul class="answers">
-  <li>a) SELECT Osoby.Nazwisko, Osoby.Imie, Osoby.Zarobki FROM Osoby HAVING Osoby.Zarobki>1000;</li>
-  <li class="correct">b) INSERT INTO Osoby SELECT * FROM Osoby WHERE Nazwisko = ‘KOWALSKI’;</li>
-  <li>c) DELETE FROM Osoby WHENEVER Osoby.Zarobki<1000;</li>
-  <li>d) UPDATE Osoby WHERE Nazwisko=’KOWALSKI’;</li>
-</ul>
-
-<div class="question">6. Dane są dwie tabele Osoby(Imie, Nazwisko, Zarobki, Id_działu) oraz Działy(Id_działu, Nazwa). Które z następujących instrukcji są poprawnymi instrukcjami SQL w Oracle:</div>
-<ul class="answers">
-  <li>a) SELECT Osoby.Nazwisko, Osoby.Imie, Osoby.Id_działu WHERE Działy.Nazwa=’PRAWNY’;</li>
-  <li class="correct">b) INSERT INTO Osoby(Imie, Nazwisko,Zarobki) VALUES (‘Jan’, ‘Kowalski’, 2000);</li>
-  <li class="correct">c) DELETE FROM Osoby WHERE Id_działu=(SELECT Id_działu FROM Działy WHERE Nazwa=’BUFET’);</li>
-  <li>d) UPDATE Osoby DELETE Nazwisko=USER;</li>
-</ul>
-
-<div class="question">7. Dane są dwie tabele Osoby(Imie, Nazwisko, Zarobki, Id_działu) oraz Działy(Id_działu, Nazwa). Które z następujących instrukcji są poprawnymi instrukcjami SQL w Oracle:</div>
-<ul class="answers">
-  <li class="correct">a) SELECT Osoby.Nazwisko, Działy.Nazwa FROM Osoby, Działy WHERE Osoby.Id_działu=Działy.Id_działu GROUP BY Osoby.Nazwisko;</li>
-  <li>b) INSERT INTO Osoby VALUES (‘Jan’, ‘Kowalski’, 2000) WHERE Osoby.Id_działu = 23;</li>
-  <li>c) DELETE FROM Osoby, Działy WHERE Osoby.Nazwisko=’KOWALSKI’ AND Działy.Nazwa=’KASA’;</li>
-  <li class="correct">d) UPDATE Osoby SET Id_działu=NULL;</li>
-</ul>
-
-<div class="question">8. Dane są dwie tabele Osoby(Imie, Nazwisko, Zarobki, Id_działu) oraz Działy(Id_działu, Nazwa). Które z następujących instrukcji są poprawnymi instrukcjami SQL w Oracle:</div>
-<ul class="answers">
-  <li class="correct">a) SELECT Osoby.Nazwisko, COUNT(Działy.Nazwa) FROM Osoby, Działy WHERE Osoby.Id_działu=Działy.Id_działu GROUP BY Osoby.Nazwisko;</li>
-  <li>b) INSERT INTO Osoby VALUES (‘Jan’, ‘Kowalski’, 2000) WHERE Osoby.Id_działu = 23;</li>
-  <li>c) DELETE FROM Osoby, Działy WHERE Osoby.Nazwisko=’KOWALSKI’ AND Działy.Nazwa=’KASA’ AND Osoby.Id_działu=Działy.Id_działu;</li>
-  <li>d) UPDATE Osoby SET Id_działu=NULL WHERE COUNT(*)<5;</li>
-</ul>
-
-<div class="question">9. Dane są dwie tabele Osoby(Imie, Nazwisko, Zarobki, Id_działu) oraz Działy(Id_działu, Nazwa). Które z następujących instrukcji są poprawnymi instrukcjami SQL w Oracle:</div>
-<ul class="answers">
-  <li class="correct">a) SELECT Osoby.Nazwisko, COUNT(Działy.Nazwa) FROM Osoby, Działy WHERE Osoby.Id_działu=Działy.Id_działu GROUP BY Osoby.Nazwisko HAVING COUNT(Id_działu)<2;</li>
-  <li>b) INSERT INTO Osoby VALUES (‘Jan’, ‘Kowalski’, 2000) WHERE Osoby.Id_działu = 23;</li>
-  <li>c) DELETE FROM Osoby, Działy WHERE Osoby.Nazwisko=’KOWALSKI’ AND Działy.Nazwa=’KASA’ AND Osoby.Id_działu=Działy.Id_działu;</li>
-  <li class="correct">d) UPDATE Osoby SET Id_działu=NULL WHERE 5>(SELECT COUNT(*) FROM Działy);</li>
-</ul>
-
-<div class="question">10. Dane są dwie tabele Osoby(Imie, Nazwisko, Zarobki, Id_działu) oraz Działy(Id_działu, Nazwa). Które z następujących instrukcji są poprawnymi instrukcjami SQL w Oracle:</div>
-<ul class="answers">
-  <li>a) SELECT Osoby.Nazwisko, Działy.Nazwa FROM Osoby, Działy WHERE Osoby.Id_działu=Działy.Id_działu GROUP BY Osoby.Nazwisko HAVING COUNT(Działy.Id_działu)<2;</li>
-  <li>b) INSERT INTO Osoby VALUES (‘Jan’, ‘Kowalski’, 2000);</li>
-  <li>c) DELETE FROM Osoby WHERE Osoby.Nazwisko=’KOWALSKI’ AND Działy.Id_działu=22;</li>
-  <li class="correct">d) UPDATE Osoby SET Id_działu=NULL WHERE 5>(SELECT COUNT(*) FROM Działy);</li>
-</ul>
-
-<div class="question">11. Dana jest tabela Osoby(imie, nazwisko, zarobki). Które z następujących instrukcji są poprawnymi instrukcjami SQL w Oracle:</div>
-<ul class="answers">
-  <li class="correct">SELECT  imie, nazwisko, zarobki FROM osoby UNION SELECT imie, nazwisko FROM osoby;</li>
-  <li class="correct">SELECT AVG(zarobki) FROM osoby;</li>
-  <li>SELECT imie, nazwisko FROM osoby WHERE zarobki = MAX(zarobki);</li>
-  <li class="correct">SELECT imie, nazwisko FROM osoby HAVING zarobki = MAX(zarobki);</li>
-</ul>
-
-<div class="question">12. Dana jest tabela Osoby(imie, nazwisko, zarobki, id_dzialu). Które z następujących instrukcji są poprawnymi instrukcjami SQL w Oracle:</div>
-<ul class="answers">
-  <li>SELECT imie, nazwisko, AVG(zarobki) FROM Osoby GROUP BY id_dzialu;</li>
-  <li class="correct">SELECT id_dzialu, AVG(zarobki) FROM Osoby GROUP BY id_dzialu;</li>
-  <li>SELECT id_dzialu, AVG(zarobki) FROM Osoby GROUP BY id_dzialu WHERE AVG(zarobki) > 1000;</li>
-  <li class="correct">SELECT AVG(zarobki) from Osoby WHERE zarobki > 1000;</li>
-</ul>
-
-<div class="question">13. Dana jest tabela Osoby(imie, nazwisko, zarobki). Które z następujących instrukcji są poprawnymi instrukcjami SQL w Oracle:</div>
-<ul class="answers">
-  <li class="correct">INSERT INTO Osoby (imie, nazwisko, zarobki) VALUES (‘Jan’, ‘Kowalski’, 1000);</li>
-  <li>INSERT INTO Osoby VALUES (‘Jan’, ‘Kowalski’);</li>
-  <li class="correct">DELETE FROM Osoby WHERE Nazwisko LIKE ‘Kowalski’;</li>
-  <li>UPDATE Osoby.Nazwisko = ‘Kowalski’;</li>
-</ul>
-
-<div class="question">1. Wskazać poprawne zapytanie SQL znajdujące pracowników zarabiających minimalną pensję na ich stanowiskach pracy.</div>
-<ul class="answers">
-  <li class="correct">SELECT ename, job, sal FROM emp e WHERE sal = (SELECT MIN(sal)FROM emp WHERE job = e.job);</li>
-  <li>SELECT ename, job, sal FROM emp WHERE( sal,job) in (SELECT MIN(sal),job FROM emp GROUP BY job );</li>
-  <li>SELECT ename, job, sal FROM emp WHERE sal = (SELECT MIN(sal)FROM emp GROUP BY job );</li>
-  <li>SELECT ename, job, MIN(sal) FROM emp GROUP BY job;</li>
-</ul>
-
-<div class="question">2. Wskazać poprawne zapytanie SQL znajdujące dla każdego departamentu ostatnio zatrudnionych pracowników.</div>
-<ul class="answers">
-  <li class="correct">SELECT deptno, ename, hiredate FROM emp WHERE (hiredate, deptno) IN (SELECT MAX(hiredate), deptno FROM emp GROUP BY deptno);</li>
-  <li>SELECT deptno, ename, hiredate FROM emp e WHERE (hiredate,) = (SELECT MAX(hiredate) FROM emp WHERE  deptno=e.deptno GROUP BY deptno);</li>
-  <li>SELECT deptno, ename, hiredate FROM emp WHERE hiredate = (SELECT MAX(hiredate) FROM emp GROUP BY deptno);</li>
-  <li>SELECT deptno, ename, MAX(hiredate)  FROM emp GROUP BY deptno;</li>
-</ul>
-
-<div class="question">3. Wskazać poprawne zapytanie SQL znajdujące pracowników o najniższych zarobkach w ich działach.</div>
-<ul class="answers">
-  <li class="correct">SELECT ename, sal, deptno FROM emp WHERE (sal, deptno) IN (SELECT MIN(sal), deptno FROM empGROUP BY deptno);</li>
-  <li class="correct">SELECT ename, deptno, sal FROM emp e WHERE sal = (SELECT MIN(sal)FROM emp WHERE deptno = e. deptno);</li>
-  <li>SELECT ename, sal, deptno FROM empWHERE sal IN (SELECT MIN(sal)FROM empGROUP BY deptno)</li>
-  <li>SELECT ename MIN(sal), deptno FROM emp GROUP BY deptno)</li>
-</ul>
-
-<div class="question">4. Wskazać poprawne zapytanie SQL znajdujące pracowników, których zarobki są wyższe od pensji każdego pracownika z departamentu 30.</div>
-<ul class="answers">
-  <li class="correct">SELECT ename, sal, job, deptno FROM emp WHERE sal> ALL (SELECT DISTINCT sal FROM emp WHERE deptno = 30);</li>
-  <li>SELECT ename, sal, job, deptno FROM emp WHERE sal> (SELECT Max( sal) FROM emp WHERE deptno = 30);</li>
-  <li>SELECT ename, sal, job, deptno FROM emp WHERE sal> ANY (SELECT DISTINCT sal FROM emp WHERE deptno = 30);</li>
-  <li>SELECT ename, sal, job, deptno FROM emp WHERE sal> (SELECT Min( sal) FROM emp WHERE deptno = 30);</li>
-</ul>
-
-<div class="question">5. Wskazać poprawne zapytanie SQL znajdujące stanowiska pracy występujące w działach 10 lub 20.</div>
-<ul class="answers">
-  <li class="correct">SELECT DISTINCT job FROM emp WHERE deptno = 10 OR deptno = 20</li>
-  <li class="correct">SELECT DISTINCT job FROM emp WHERE deptno = 10 UNION SELECT DISTINCT job FROM emp WHERE deptno = 20</li>
-  <li>SELECT DISTINCT job FROM emp WHERE deptno = 10 AND deptno = 20</li>
-  <li>SELECT DISTINCT job FROM emp WHERE deptno = 10 INTERSECT SELECT DISTINCT job FROM emp WHERE deptno = 20</li>
-</ul>
-
-<div class="question">6. Wskazać poprawne zapytanie SQL znajdujące stanowiska pracy występujące zarówno  w dziale 10 jak i w dziale 20.</div>
-<ul class="answers">
-  <li class="correct">SELECT DISTINCT job FROM emp WHERE deptno = 10 INTERSECT SELECT DISTINCT job FROM emp WHERE deptno = 20</li>
-  <li>SELECT DISTINCT job FROM emp WHERE deptno = 10 OR deptno = 20</li>
-  <li>SELECT DISTINCT job FROM emp WHERE deptno = 10 UNION SELECT DISTINCT job FROM emp WHERE deptno = 20</li>
-  <li>SELECT DISTINCT job FROM emp WHERE deptno = 10 AND deptno = 20</li>
-</ul>
-
-<div class="question">7. Wskazać poprawne zapytanie SQL znajdujące pracowników, którzy zarabiają mniej od swoich kierowników.</div>
-<ul class="answers">
-  <li class="correct">SELECT e.ename prac_name, e.sal prac_sal, m.ename kier_name, m.sal kier_sal FROM emp e, emp m WHERE e.mgr = m.empno AND e.sal < m.sal</li>
-  <li>SELECT e.ename prac_name, e.sal prac_sal, m.ename kier_name, m.sal kier_sal FROM emp e, emp m WHERE e.mgr = m.empno AND m.sal < e.sal</li>
-  <li>SELECT e.ename prac_name, e.sal prac_sal, m.ename kier_name, m.sal kier_sal FROM emp e, emp m WHERE e.mgr = m.mgr AND e.sal < m.sal</li>
-  <li>SELECT e.ename prac_name, e.sal prac_sal, m.ename kier_name, m.sal kier_sal FROM emp e, emp m WHERE e.mgr = m.mgr AND m.sal < e.sal</li>
-</ul>
-
-<div class="question">8. Wskazać poprawne zapytanie SQL znajdujące średnie zarobki tylko tych departamentów, które zatrudniają więcej niż trzech pracowników.</div>
-<ul class="answers">
-  <li class="correct">SELECT deptno, AVG(sal) FROM emp GROUP BY deptno HAVING COUNT (*) > 3;</li>
-  <li>SELECT deptno, AVG(sal) FROM emp HAVING COUNT (*) > 3 GROUP BY deptno ;</li>
-  <li>SELECT deptno, AVG(sal) FROM emp GROUP BY deptno WHERE COUNT (*) > 3;</li>
-  <li>SELECT deptno, AVG(sal) FROM emp WHERE COUNT (*) > 3 GROUP BY deptno ;</li>
-</ul>
-
-<div class="question">9. Wskazać poprawne zapytanie SQL znajdujące stanowiska, na których średni zarobek wynosi 3000 lub więcej.</div>
-<ul class="answers">
-  <li class="correct">SELECT job, AVG(sal) FROM emp GROUP BY job HAVING AVG (sal) > =3000;</li>
-  <li>SELECT job, AVG(sal) FROM emp HAVING AVG (sal) > =3000GROUP BY job;</li>
-  <li>SELECT job, AVG(sal) FROM emp GROUP BY job WHERE AVG (sal) > =3000;</li>
-  <li>SELECT job, AVG(sal) FROM emp WHERE AVG (sal) > =3000 GROUP BY job;</li>
-</ul>
-
-<div class="question">10. Wskazać poprawne zapytanie SQL znajdujące departamenty zatrudniające powyżej trzech pracowników</div>
-<ul class="answers">
-  <li class="correct">SELECT deptno, COUNT(*) FROM emp GROUP BY deptno HAVING COUNT (*) > 3;</li>
-  <li>SELECT deptno, COUNT(*) FROM emp HAVING COUNT (*) > 3 GROUP BY deptno;</li>
-  <li>SELECT deptno, COUNT(*) FROM emp GROUP BY deptno WHERE COUNT (*) > 3;</li>
-  <li>SELECT deptno, COUNT(*) FROM emp WHERE COUNT (*) > 3 GROUP BY deptno;</li>
-</ul>
-
-<div class="question">11. Wskazać poprawne zapytanie SQL znajdujące ilość pracowników w dziale mającym siedzibę w DALLAS.</div>
-<ul class="answers">
-  <li class="correct">SELECT COUNT (*) FROM emp, dept WHERE dept.loc = ‘DALLAS’ AND emp.deptno = dept.deptno GROUP BY dept.deptno;</li>
-  <li>SELECT COUNT (*) FROM emp WHERE deptno =  (SELECT deptno FROM  dept WHERE loc = ‘DALLAS’)</li>
-  <li>SELECT COUNT (*) FROM emp, dept WHERE dept.loc = ‘DALLAS’ GROUP BY dept,deptno;</li>
-  <li>SELECT COUNT (*) FROM emp, dept WHERE emp.deptno = dept.deptno GROUP BY dept,deptno HAVING dept.loc = ‘DALLAS’;</li>
-</ul>
-
-<div class="question">12. Wskazać poprawne zapytanie SQL znajdujące średni zarobek pracowników z drugiej klasy zarobkowej.</div>
-<ul class="answers">
-  <li>SELECT AVG(sal ) FROM emp, salgradeWHERE.grade = 2 AND sal BETWEEN losal AND hisal GROUP BY.grade</li>
-  <li>SELECT AVG(sal ) FROM emp, salgradeWHERE.grade = 2 AND sal > losal AND sal < hisal GROUP BY.grade</li>
-  <li>SELECT AVG(sal ) FROM emp,WHERE.  sal > (SELECT losal FROM salgradeWHERE.grade = 2) AND sal < SELECT hisal FROM salgradeWHERE.grade = 2)</li>
-  <li class="correct">SELECT AVG(sal ) FROM emp, salgradeWHERE.grade = 2 AND sal BETWEEN losal AND hisal ;</li>
-</ul>
-
-<div class="question">13. Wskazać poprawne zapytanie SQL znajdujące trzech najlepiej zarabiających pracowników w firmie - ich nazwiska i pensje.</div>
-<ul class="answers">
-  <li class="correct">SELECT ename, sal FROM emp e WHERE 3 > (SELECT count (*) FROM emp WHERE e.sal < sal);</li>
-  <li>SELECT ename, sal FROM emp e WHERE count(*)<3</li>
-  <li>SELECT ename, sal FROM emp e GROUP BY.deptno  HAVING count(*)<3</li>
-</ul>
-
+  <header>
+    <h1>apbdegz — tekst z PDF w HTML</h1>
+    <p>Wersja zachowująca układ (znaki wypunktowań i nowe linie) w bloku &lt;pre&gt;.</p>
+  </header>
+  <main>
+    <div class="paper">
+      <div class="content">
+        <pre>Cechy systemu Git  
+ kontrola wersji  
+• zapisuje zmiany plików w czasie, umożliwiając przywołanie konkretnej 
+wersji  
+ snapshoty  
+• pozwala na tworzenie „migawki” projektu  
+• każda migawka zapisuje stan projektu w danym momencie, co umożliwia 
+powrót do wcześniejszych wersji  
+ pełne kopie repozytorium  
+• każdy użytkownik posiada pełną lokalną kopie repozytorium i jego historię  
+• pozwala to na szeroki zakres działań offline  
+ bezpieczeństwo i redundancja  
+• ryzyko utraty danych jest zminimalizowane  
+ rozgałęzienia  (branches)  i scalanie  
+• umożliwia tworzenie równoległych „rzeczywistości” dla projektu  
+• radzi sobie z rozgałęzieniami efektywnie i intuicyjnie  
+• wpiera dynamiczny przepływ pracy  
+• zmniejsza ryzyko konfliktów scalania  
+ wydajność  
+• wiele operacji jest szybszych bo dotyczą one tylko lokalnych plików a nie 
+komunikacji sieciowej  
+ kontrola dostępu  
+• można implementować mechanizmy kontroli dostępu  
+ 
+CVSC  
+ system kontroli wersji  
+ wszystkie wersjonowane pliki są przechowywane w centralnym serwerze  
+ cechy  
+• pojedyncze repozytorium  
+▪ wszystkie pliki projektu i dane historyczne przechowywane są w 
+jednym centralnym miejscu  
+▪ użytkownicy muszą połączyć się  centralnym serwerem aby przesłać 
+lub pobrać zmiany  
+• kontrola dostępu  
+▪ centralny serwer może wymuszać kontrole dostępu  
+▪ określa kto może czytać lub zapisywać repozytorium  
+▪ pomaga to w zarządzaniu uprawnieniami i bezpieczeństwem  
+• wymagany dostęp do sieci  
+▪ użytkownicy muszą mieć dostęp do sieci  
+▪ ograniczenie w przypadku pracy offline  
+• widoczność  
+▪ łatwiejsze monitorowanie i zarządzanie rozwojem projektu  
+ 
+DVCS  
+ system kontroli wersji  
+ każdy użytkownik otrzymuje osobistą kopię całego repozytorium  i jego historii  
+ cechy  
+• pełna kopia repozytorium  
+o pozwala na szeroki zakres działań offline  
+• udostępnianie peer -to-peer  
+o zmiany mogą być udostępniane bezpośrednio pomiędzy 
+użytkownikami lub za pośrednictwem centralnego serwera  
+o wzmacnia współpracę  
+o pozwala na różne przepływy pracy  
+• redundancja  
+o ryzyko utraty danych jest zminimalizowane  
+o każdy klon jest pełną kopią zapasową repozytorium  
+• rozgałęziania i scalanie  
+o dobre radzenie sobie z tworzeniem gałęzi i łączeniem zmian  
+o dynamiczny przepływ pracy  
+o mniejsze ryzyko konfliktów przy scalaniu  
+• wydajność  
+o operacje są szybsze  
+o obejmują tylko lokalne pliki a nie komunikację sieciową  
+• kontrola dostępu  
+o mechanizmy kontroli dostępu mogą być wdrażane  
+ 
+Różnice między CSCV i DVCS  
+ struktura repozytorium  
+• CVCS – centralny serwer  
+• DVCS – każdy użytkownik ma pełną kopię repozytorium i historii  
+ praca offline  
+• CVCS – praca wymaga połączenia z centralnym serwerem, utrudniona 
+praca offline  
+• DVCS – ułatwiona praca offline  
+ bezpieczeństwo i redundancja  
+• CVSC – jeśli centralny serwer przestanie działać to nie można nic zrobić  
+• DVCS – każda kopia jest pełnym backupem  
+ wydajność  
+• CVCS – wolniejsze z powodu zależności od sieci  
+• DVCS – wiele szybszych operacji przez wykonywanie lokalne  
+ rozgałęzienia i scalanie  
+• CVCS – bardziej skomplikowane i podatne na konflikty  
+• DVCS – lepsze radzenie sobie  
+ kontrola dostępu  
+• CVCS – łatwe zarządzanie uprawnieniami dostępu  
+• DVCS – można implementować mechanizmy kontroli dostępu  
+ widoczność  
+• CVCS – łatwiejszy wgląd i zarządzanie rozwojem projektu  
+• DVCS – konieczność koordynowania wielu kopii  
+ 
+Staging area  
+ miejsce, gdzie przygotowywane są zmiany do zatwierdzenia  (commitu)  
+ jest to bufor pomiędzy working directory a historią commitów  
+ funkcje  
+• pozwala na selektywne zatwierdzanie zmian  
+• umożliwia przegląd i modyfikowanie zestawu zmian zanim zostaną trwale 
+zapisane w historii projektu  
+ komendy  
+• git add <file> - dodaje plik lub zmiany do staging area  
+• git status – wyświetla informacje o stanie working directory i staging area  
+ 
+Working area/working tree  
+ aktualny stan plików  w projekcie na dysku  
+ miejsce gdzie faktycznie są dokonywane zmiany  w plikach  
+ funkcje  
+• obejmuje wszystkie pliki projektu  
+• zawiera niezatwierdzone zmiany, zmiany dodane i niedodane do staging 
+area  
+ komendy  
+• git status – wyświetla informacje o stanie working directory i staging area  
+• git diff – porównuje różnice pomiędzy working directory a staging area lub 
+między różnymi commitami  
+ 
+Różnice między staging area i working area  
+ cel 
+• staging area – miejsce przygotowywania i przeglądania zmian przed 
+zatwierdzeniem  
+• working area – miejsce dokonywania bieżących zmian w plikach projektu  
+ rola w przepływie pracy  
+• staging area – zawiera wybrane zmiany, które zostały przygotowane do 
+zatwierdzenia  
+• working area – zawiera wszystkie bieżące zmiany, zatwierdzone i w trakcje 
+edycji  
+ widoczność zmian  
+• staging area – widoczne są tylko zmiany które zostały dodane  
+• working area – widoczne są wszystkie zmiany  
+ 
+Komenda git commit  
+ zapisywanie zmian w lokalnym repozytorium  
+ dotyczy tylko lokalnego repozytorium  
+ nie wpływa na zdalne repozytorium , dopóki nie pushniemy zmian  
+ opcja -m dodaje widomość do commita  
+ 
+Komenda git status  
+ wyświetlanie stanu  working directory i staging area  
+ pokazuje zmiany, które zostały przechowane (za pomocą git add)  i 
+nieprzechowane oraz pliki, które nie są śledzone przez Git  
+ dobry sposób aby uzyskać podgląd tego co dzieje się w repozytorium przed 
+zatwierdzeniem zmian  
+ 
+Komenda git add  
+ dodanie zmian  ze wszystkich plików w bieżącym katalogu do staging area, 
+przygotowując je do uwzględnienia w następnym commicie  
+ 
+Komenda git push  
+ przesyłanie lokalnych zmian  w repozytorium do zdalnego repozytorium  
+ 
+Gałąź (branch)  
+ odniesienie do commitu  
+ możemy nadać jej nazwe  
+ 
+Elementy ekosystemu .NET  
+ CTS – Common Type System  
+• definiuje typy danych i konstrukcje programistyczne  
+ CLR – Common Language Runtime  
+• środowisko uruchomieniowe  
+• zarządzanie pamięcią, bezpieczeństwo typów, obsługa wyjątków  
+ FCL – Framework Class Library  
+• kolekcja klas, interfejsów i typów wartości  
+ metadata i assemblies  
+• używanie assemblies jako bloków budulcowych aplikacji, które zawierają 
+metadata o typach zdefiniowanych w programie  
+• metadata zapewniają, że informacje o każdym typie i członku są dostępne 
+w czasie uruchomienia  
+ BCL – Base Class Libraries  
+• dostarcza najbardziej fundamentalne klasy  
+• np. System.String, Systam.DateTime  
+ 
+Różnice między językiem Java i C#  
+ platforma  
+• Java – niezależna od platformy dzięki użyciu maszyny wirtualnej Java (JVM)  
+• C# - działa głównie na platformie  
+• .NET  
+ składnia  
+• C# - posiada metody asynchroniczne  
+ podstawowe kolekcje  
+• Java – LinkedHashSet, TreeSet, TreeMap, LInkedHashMap  
+• C# – SortedSet, SortedDictionary, SortedList  
+ 
+Proces kompilacji  
+ Java  
+o kompilowanie do bajt kodu  
+o interpretowany przez JVM  
+ C#  
+o kompilowanie do języka pośredniego (IL)  
+o uruchamiany przez Common Language Runtime (CLR)  
+ 
+Ocena algorytmu  
+ złożoność obliczeniowa  czasowa  i pamięciowa  
+ dokładność i precyzja  
+o dokładność wyników w porównaniu do oczekiwanych wartości  
+ stabilność  
+o reakcja na niewielkie zmiany w danych wejściowych  
+o stabilny algorytm nie będzie dawał drastycznie różnych wyników  
+ skalowalność  
+o wydajność algorytmu przy rosnących ilościach danych  
+ czytelność i łatwość utrzymania kodu  
+ modularność  
+o podział na niezależne moduły  
+ 
+Miary jakości kod u 
+ złożoność cyklomatyczna  
+ modularność  
+ kohezja  
+ coupling ( sprzężenie) 
+ abstrakcyjność  
+ niestabilność  
+ odległość od głównej sekwencji  
+ connascence (?)  
+ 
+Kohezja  
+ stopień, w jakim części modułu powinny być zawarte w innym module  
+ miara jak bardzo powiązane są ze sobą części  
+ idealnie spójny moduł to taki, w którym wszystkie części są pakowane razem  
+ rodzaje  
+• kohezja funkcjonalna  
+o każda część modułu jest powiązana z innym  
+o moduł zawiera wszystko, co jest niezbędne do działania  
+• kohezja sekwencyjna  
+o dwa moduły współdziałają  
+o jeden generuje dane, które stają się wejściem dla drugiego  
+• kohezja komunikacyjna  
+o dwa moduły tworzą łańcuch  komunikacyjny  
+o każdy moduł operuje na informacjach i/lub przyczynia się do jakiegoś 
+wyniku  
+• kohezja proceduralna  
+o dwa moduły muszą wykonywać kod w określonej kolejności  
+• kohezja czasowa  
+o moduły powiązane są ze sobą na podstawie zależności czasowyc h 
+• kohezja logiczna  
+o dane w modułach są powiązane logicznie, a nie funkcjonalnie  
+ 
+Coupling (sprzężenie)  
+ miara jak bardzo jeden moduł wie o innym module i na nim polega  
+ niski coupling jest zazwyczaj lepszy  
+ rodzaje  
+• efferent coupling  
+o zależności wychodzące  
+o ilość różnych modułów , od których zależy mój moduł  
+• afferent coupling  
+o zależności przychodzące  
+o ilość różnych modułów, które zależą od mojego modułu  
+ ważne jest balansowanie  rodzajów couplingu  
+ 
+Miara abstrakcji  
+ stosunek abstrakcji artefaktów  (klasy abstrakcyjne, interfejsy itp.) do konkretnych 
+artefaktów (implementacji)  
+ miara abstrakcyjności w stosunku do implementacji  
+ 
+Connascence  
+ dwa komponenty są connascence, jeśli zmiana w jednym wymagałaby 
+zmodyfikowania drugiego , aby zachować ogólną poprawność systemu  
+ 
+DRY  
+ don’t repeat you rself  
+ każdy fragment wiedzy lub logiki powinien być reprezentowany w systemie tylko 
+raz 
+ unikanie powielania kodu  
+ zwiększenie czytelności, ułatwienie utrzymania i zmniejszenie ryzyka błędów  
+ 
+YAGNI  
+ you aren’t gonna need it  
+ nie należy implementować funkcjonalności, która nie jest obecnie potrzebna  
+ pomaga uniknąć nadmiernej komplikacji kodu i koncentruje na aktualnych 
+wymaganiach  
+ 
+SOLID  
+ pięć zasad projektowania i programowania obiektowego  
+ sprawienie aby projekt był bardziej zrozumiały, elastyczny i łatwiejszy do 
+utrzymania  
+ zasady  
+o zasada jednej odpowiedzialności  – SRP  
+▪ klasa powinna mieć tylko jedno zadanie lub funkcjonalność  
+o zasada otwarte -zamknięte – OCP  
+▪ podmioty oprogramowania (klasy, moduły, funkcje itp.) powinny być 
+otwarte na rozszerzenia ale zamknięte na modyfikacje  
+o zasada podstawienie Liskov – LSP  
+▪ obiekty klasy bazowej powinny być zastępowalne obiektami klasy 
+pochodnej bez wpływu na poprawność programu  
+o zasada segregacji interfejsu – ISP 
+▪ żaden użytkownik nie powinien być zmuszony do zależności od 
+metod, których nie używa  
+▪ tworzenie małych interfejsów, specyficznych dla użytkownika, a nie 
+jednego dużego  
+o zasada odwróconej zależności – DIP  
+▪ moduły wysokiego poziomu nie powinny zależeć od modułów 
+niskiego poziomu  
+▪ moduły powinny zależeć od abstrakcji  
+▪ szczegóły powinny zależeć od abstrakcji  
+ 
+Piramida testów  
+ koncepcja opisująca jak różne rodzaje testów powinny być zorganizowane , aby 
+zapewnić efektywność i pokrycie testowe  
+ warstwy  
+o testy jednostkowe  
+o testy integracyjne  
+o testy end -to-end  
+ 
+Testy jednostkowe  
+ rodzaj testowania automatycznego  
+ koncentruje się na weryfikacji najmniejszych części oprogramowania , czyli 
+jednostkach  
+ jednostka może być funkcją, metodą, modułem lub obiektem  
+ celem jest upewnienie się, ze każda jednostka działa zgodnie z projektem  
+ często wykonywane w trakcie procesu rozwoju  
+ szybkie wykrywanie błędów, ułatwienie refaktoryzacji kodu i zapewnienie, że 
+ostatnie zmiany nie wpłynęły negatywnie na istniejące funkcjonalności  
+ charakterystyka  
+o izolacja  
+▪ testowanie jednostek kodu w izolacji od reszty systemu  
+o prostota  
+▪ koncentracja na jednym aspekcie zachowania jednostki  
+o automatyzacja  
+▪ szybko i często wykonywane bez ręcznej interwencji  
+o powtarzalność  
+▪ może być uruchamiany wielokrotnie  w dowolnym środowisku z 
+oczekiwaniem tego samego wyniku za każdym razem  
+ 
+Testy end -to-end (e2e)  
+ sprawdz enie działania całego systemu z perspektywy użytkownika 
+końcowego  
+ celem jest upewnienie się, że wszys tkie komponenty systemu współpracują ze 
+sobą poprawnie  i że system jako całość spełnia wymagania funkcjonalne  
+ symulują rzeczywiste scenariusze  użytkownika  
+ 
+Testy biało skrzynkowe  
+ tester ma pełną wiedzę  na temat wewnętrznej struktury kodu  i algorytmów 
+aplikacji  
+ koncentrują się na weryfikacji logiki wewnętrznej, struktur danych, przepływów 
+kontrolnych oraz pokrycia kodu  
+ 
+Testy czarno skrzynkowe  
+ tester nie ma wiedzy  na temat wewnętrznej struktury kodu  
+ ocena funkcjonalności aplikacji  
+ 
+Metoda AAA (Arrange -Act-Assert) pisania testów  
+ podejście do pisania  testów jednostkowych  
+ pomaga w utrzymaniu przejrzystości i zrozumiałości kodu testowego  
+ organizacja  
+• Arrange - przygotowanie  
+o przygotowanie wszystkich niezbędnych danych wejściowych, 
+obiektów, zależności i innych zasobów  
+• Act – działanie  
+o wykonanie rzeczywistego działani a, które ma być testowane  
+• Assert – weryfikacja  
+o sprawdzenie wyników działania  
+o porównanie rzeczywistego wyniku z oczekiwanymi wartościami  
+ 
+Nazewnictwo testów  
+ zapewnia, że zestawy testów są łatwe do zrozumienia i utrzymania  
+ przekazanie celu testu, warunków, w których jest uruchamiany i jaki wynik jest 
+oczekiwany  
+ przykład: NazwaMetody_Stan_OczekiwanyWynik  
+ 
+Wyrażenia lambda  
+ zwięzły sposó b reprezentowania  anonimowych metod  (metod bez nazwy) lub 
+wyrażeń  
+ przydatne do pisania krótkich fragmentów kodu , które można przekazywać jako 
+argumenty lub zwracać z innych metod  
+ składnia  
+o (lista-argumentów) => wyrażenie  
+o (lista-argumentów) => { metoda(m); } 
+ 
+Delegaty 
+ typy, które  służą do przechowywania referencji do metod  
+ umożliwiają traktowanie metod jak o obiektów  
+ pozwalają na przekazywanie metod jako argumentów do innych metod, 
+przechowywanie w zmiennych  oraz wywoływanie w sposób dynamiczny  
+ 
+Action  
+ typ delegata  
+ służy do reprezentowania metody, która nie zwraca wartości  i może 
+przyjmować  zero lub więcej argumentów  
+ zdefiniowany w przestrzeni nazw System  
+ składnia: Action< typ argument u, …> 
+ 
+Func  
+ typ delegata  
+ służy do reprezentowania metody, która może zwracać wartości  i może 
+przyjmować zero lub więcej argumentów  
+ ostatni typ a rgumentu określa typ zwracanej wartości  
+ składnia: Func< typ argumentu, …, typ zwracanej wartości>  
+ 
+Cechy architektury REST  
+ używa standardowych metod HTTP  
+• GET  
+• POST  
+• PUT DELETE  
+ lekka  
+ bezstanowa  
+ 
+Przetwarzanie żądań HTTP przez ASP.NET  
+ za pomocą  potoku przetwarzania  (request pip eline), który składa się z serii 
+pośredników  (middleware)  
+ procesowanie żądań  
+• pośrednik może przetwarzać żądanie i przekazywać je do następnego 
+pośrednika w sekwencji  
+• pośrednik może zdecydować o nieprze kazywaniu żądania dalej, 
+przerywając potok  
+• pośrednik może wykonać operacje, a następnie przekazać żądanie do 
+kolejnego pośrednika , a po jego przetworzeniu wrócić do swojej części 
+odpowiedzi  
+ etapy  
+• odbieranie żądania  
+o aplikacja ASP.NET odbiera żądanie http od klienta  
+• routing  
+o żądanie jest kierowane do odpowiedniego kontrolera na podstawie 
+jego adresu URL  
+• obsługa przez kontrolery i akcje  
+o kontroler odpowiada za obsługę żądania, a konkretna akcja 
+kontrolera wykonuje operacje biznesowe i przygotowuje odpowiedź  
+• generowanie odpowiedzi  
+o po przetworzeniu żądania, odpowiedź jest generowana i 
+przekazywana z powrotem przez pośredników  
+• wysłanie odpowiedzi  
+o ostateczna odpowiedź jest wysyłana z powrotem do klienta  
+ 
+Projektowanie końcówek zgodnych z architekturą REST  
+ używanie rzeczowników  zamiast czasowników w ścieżkach końcówek  
+ nazwy kolekcji w liczbie mnogiej  
+ zagnieżdżanie zasobów dla hierarchicznych obiektów  
+ obsługa błędów w sposób przyjazny i zwracanie standardowych kodów błędów  
+ umożliwienie filtrowania, sortowania i paginacji  
+ 
+Metody HTTP  
+ GET  
+• metoda żądająca danych z zasobu  
+ POST  
+• metoda żądająca od serwera utworzenia zasobu w bazie danych  
+ PUT  
+• metoda żądająca od serwera aktualizacji lub utworzenia zasobu, jeśli nie 
+istnieje  
+ DELETE  
+• metoda żądająca od serwera usunięcia zasobu lub jego instancji z bazy 
+danych  
+ 
+Rutowanie (routing)  
+ proces mapowania przychodzących żądań HTTP do odpowiednik końcówek  
+(endpoints) w aplikacji , takich jak kontrolery i akcje  
+ rutowanie atrybutowe  
+o pozwala na bezpośrednie określenie tras w kontrolerach i akcjach za 
+pomocą atrybutów  
+o większa kontrola nad adresami URL  
+o bardziej czytelny i zorganizowany kod  
+o ułatwienie  zarządzania złożonymi trasami w dużych aplikacjach  
+ 
+Content Negotiation (negocjacja zawartości)  
+ proces, w któ rym serwer i klient uzgadniają odpowiedni format danych 
+zwracanych przez serwer  na podstawie nagłówków żądania  
+ np. JSON, XML, zwykły tekst  
+ 
+Minimal API  
+ oferuje uproszczone podejście  do budowy API HTTP z mniejszą ilością kodu 
+wstępnego  
+ ułatwienie i przyśpieszenie tworzenia prostych i skoncentrowanych mikrousług 
+lub usług webowych  
+ mniejsze  złożoności i ilo ść kodu potrzebnego do skonfigurowania punktów 
+końcowych  
+ 
+Przekazywanie danych do serwera w architekturze REST  
+ segment URL  
+• część ścieżki URL  
+• reprezentuje konkretny zasób lub hierarchię w API  
+• używany do identyfikowania zasobów  
+ ciało żądania  
+• używane do przesyłanie danych na serwer  
+• używane z żądaniami POST i PUT  
+ query string  
+• parametry zapytania są dołączane do U RL 
+• elastyczny sposób przekazywania opcjonalnych lub filtrujących danych na 
+serwer  
+• zaczynają się od znaku ? i mogą zawierać wiele par klucz -wartość 
+oddzielonych &  
+ 
+Inne podejścia do budowy aplikacji webowych  
+ RPC 
+• koncepcja  
+o umożliwia programowi na jednym komputerze  wywołanie procedury 
+na innym komputerze bez potrzeby znajomości szczegółów  sieci  
+• cechy  
+o abstrakcja wywołania procedury  
+o wykorzystanie protokołu transportowego  
+• użycie  
+o komunikacja wewnętrzna w ramach jednej organizacji, gdzie można 
+kontrolować obie strony komunikacji  
+ CORBA  
+• koncepcja  
+o umożliwia obiektom komunikację ze sobą niezależnie o języka 
+programowania, systemu operacyjnego czy sprzętu  
+• cechy  
+o niezależność języka i platformy  
+o obsługa złożonej komunikacji obiektowej  
+• użycie  
+o odpowiednia dla dużych aplikacji korporacyjnych  wymagających 
+solidnej komunikacji międzyplatformowej  
+ SOAP  
+• koncepcja  
+o wymiana strukturalnych i nformacji w implementacji usług 
+internetowych w sieciach komputerowych  
+o formatem wiadomości jest XML  
+• cechy  
+o niezależność protokołu  
+o wysoki poziom bezpieczeństwa  
+o rozległe wsparcie standardów dla integralności wiadomości i 
+uwierzytelnienia  
+• użycie  
+o odpowiednia dla usług internetowych  na poziomie korporacyjnym  
+ 
+Metoda rozszerzeń 
+ rodzaj metody statycznej  
+ zdefiniowana w klasie statycznej  
+ pozwala rozszerzyć istniejący typ o nowe metody  bez modyfikacji kodu 
+źródłowego  i używania dziedziczenia  
+ utworzenie  
+o zdefiniowanie klasy statycznej  
+o utworzenie metody w tej klasie : public static typZwracany 
+nazwaMetody(this typRozszerzany nazwa ) 
+ 
+Podejście deklaratywne  
+ opiera się na używaniu atrybutów lub innych środków deklaratywnych do 
+określania reguł walidacji bezpośrednio na właściwościach modelu  
+ kod jest bardziej przejrzysty, łatwiejszy do odczytania i utrzymania  
+ np. [Required], [MaxLength(100)]  
+ 
+Podejście imperatywne  
+ pisanie jawnego kodu do sprawdzania warunków i wykonywania operacji 
+walidacyjnych  
+ programista musi napisać kod, który ręcznie sprawdza każdą regułę walidacji i 
+podejmuje odpowiednie działania  
+ 
+Przeprowadzenie deklaratywnej walidacji  
+ dodanie odpowiedniego atrybutu  do właściwości modeli  
+ dodanie filtru ApiController , który automatycznie sprawdza poprawność 
+modelu  
+ 
+Kontener IoC (Inversion of Control)  
+ wspiera konstrukcję i wstrzykiwanie zależności  w czasie wykonywania  
+ ułatwia luźne powiązanie, poprawia testowalność oraz utrzymywalność aplikacji  
+ zarządza cyklem życia obiektów, które tworzy poprzez wstrzykiwanie zależności  
+ metody: AddScoped, AddSingleton, AddTransient  
+ połączenie interfejsu z klasą  
+ 
+Metoda AddSingleton  
+ kontener IOC tworzy i udostępnia pojedynczą instancję usługi dla wszystkich 
+żądań przez cały czas życia aplikacji  
+ przydatne dla usług, które są bezstanowe lub których stan jest bezpiecz ny dla 
+wątków i może być współdzielony bez konfliktów  
+ 
+Metoda AddScoped  
+ nowa instancja usługi zostanie utworzona dla każdego żądania klienta  
+ przydatne do utrzymania stanu instancji usługi w ramach zakresu żądania, ale nie 
+poza nim  
+ 
+Metoda AddTansient  
+ nowa instancja usługi zostanie utworzona za każdym razem, gdy są żądane z 
+kontenera usług  
+ odpowiednie dla lekkich, bezstanowych usług  
+ 
+Architektura pionowa  
+ podział aplikacji na  pionowe sekcje  
+ każda sekcja reprezentuje określoną funkcję lub przypadek użycia  aplikacji  
+ organizuje sekcje funkcjonalnie  
+ każda sekcja zawiera niezbędne komponenty potrzebne do realizacji określonej 
+funkcjonalności lub cechy  
+ większa samodzielność funkcji, zmniejszenie zależności, uproszczenie 
+skalowania i utrzymania  
+ 
+Architektura pozioma  
+ architektura n -warstwowa  
+ dzieli aplikacje na oddzielne warstwy  
+ każda warstwa jest odpowiedzialna za określony aspekt aplikacji  
+ warstwy  
+• warstwa prezentacji  
+• warstwa logiki biznesowej  
+• warstwa dostępu do danych  
+ czysta organizacja kodu i obowiązków  
+ zmiany jednej funkcji mogą wymagać zmiany w wielu warstwach  
+ 
+Repozytorium  
+ wzorzec projektowy  
+ oddziela logikę biznesową aplikacji od logiki dostępu do danych  
+ czystszy podział odpowiedzialności  
+ 
+SqlConnection  
+ nawiązanie połączenia  z bazą danych SQL Server  
+ utworzenie połączenia  
+• SqlConnection connection = new SqlConnection(connectionString)  
+ otwarcie połączenia  
+• connection.Open()  
+ 
+SqlCommand  
+ wykonywanie instrukcji  SQL w bazie danych  
+ 
+SqlConnection i SqlCommand  
+ zalety  
+• wydajność  
+o omija warstwę abstrakcji  
+• precyzyjna kontrola  
+o pełna kontrola nad wykonywaniem zapytań SQL i zarządzaniem 
+połączeniem z bazą  danych  
+• mniejszy narzut  
+o mniejsze zużycie zasobów  
+o nie wymaga generowania modelu i śledzenia zmian  
+ wady  
+• więcej kodu do napisania  
+• ryzyko błędów  
+ 
+Entity Framework  
+ zalety  
+• szybszy rozwój  
+o umożliwienie szybszego rozwoju aplikacji  dzięki mechanizmowi 
+mapowania obiektowo -relacyjnego  
+• abstrakcja  
+o wyższy poziom abstrakcji  
+o bardziej zwięzłe i czytelne pisanie kodu  
+o minimalna konieczność znajomości SQL  
+• łatwiejsze utrzymanie  
+o automatycznie generuje i zarządza skryptami migracyjnymi bazy 
+danych  
+o łatwiejsze zarządzanie zmianami schematu bazy danych  
+ wady  
+• wydajność  
+• mniejsza kontrola  
+o mniej precyzyjna kontrola nad wykonywanymi zapytaniami SQL i 
+optymalizacją zadań  
+• narzut  
+o dodatkowy narzut związany z mapowaniem obiektowo -relacyjnym i 
+śledzeniem zmian  
+o może wpływać na zużycie pamięci i czas wykonywania  
+ 
+Dobre praktyki przy użyciu SqlConnection i SqlCommand  
+ użycie bloków using  
+• zapewnienie automatycznego zamkn ięcia i zwolnienia zasobów, nawet w 
+przypadku wystąpienia wyjątku  
+ parametryzacja zapytań  
+• używanie parametrów w zapytaniach SQL  
+• zabezpieczenie aplikacji przed atakami Sql  Injection  
+• dodawanie za pomocą command.Parameters.AddWithValue(„@ p”, p) 
+ otwieranie połączeń jak najpóźniej i zamykanie jak najszybciej  
+• połączenia do bazy danych powinny być otwierane bezpośrednio przed 
+wykonaniem operacji i zamykane zaraz po jej za kończeniu  
+• efektywne zarządzanie zasobami  
+• zmniejszenie ryzyka problemów z dostępnością połączeń  
+ zarządzanie wyjątkami  
+• opakowanie operacji związanych z bazą danych w bloki try -catch  
+• obsługa wyjątku  
+• zapewnienie zamknięcia połączenia w przypadku błędu  
+ 
+Atak SQL Injection  
+ technika ataku na aplikacje internetowe  
+ wprowadzenie złośliwego kodu SQL do zapytania bazodanowego  
+ umożliwia nieautoryzowany dostęp do danych, ich modyfikację i usunięcie  
+ zabezpieczenie  
+o używanie parametrów w zapytaniach SQL  
+o wstrzykiwanie przechowywanych procedur  
+o używanie ORM  
+o walidacja danych wejściowych  
+o zasada mniejszych uprawnień  
+o monitorowanie i logowanie  
+ 
+DAL – Data Access Layer  
+ zajmuje się komunikacją z bazą danych  
+ odpowiada za wykonywanie zapytań do bazy danych, pobieranie danych i ich 
+aktualizację  
+ zapewnia abstrakcję nad technicznymi szczegółami  operacji na bazie danych  
+ łatwiejsza zmiana technologii bazodanowej bez wpływu na resztę aplikacji  
+ repozytorium  
+ 
+BAL – Business Access Layer  
+ odpowiedzialny za implemenacje logiki biznesowej  aplikacji  
+ obejmuje operacje i zasady biznesowe , które determinują sposób 
+przetwarzania danych oraz ich przepływ między różnymi warstwami aplikacji  
+ używa DAL do kom unikacji z bazą danych  
+ serwis  
+ 
+Programowanie równoległe  
+ jednoczesne wykonywanie wielu zadań lub obliczeń  
+ wykorzystuje procesory wielordzeniowe do poprawy wydajności  
+ przestrzeń nazw System.Threading.Task dostarcza narzędzi do tworzenia i 
+zarządzania zadaniami, które mogą być uruchamiane równolegle  
+ 
+Programowanie asynchroniczne  
+ wykonywanie długotrwałych zadań bez blokowania głównego wątku  
+ utrzymuje aplikacje responsywną  
+ szczególnie ważne w aplikacjach webowych  
+ modele  
+• APM  
+• EAP  
+• TAP  
+ zalety  
+• responsywność  
+• skalowalność  
+o umożliwia obsługę większej liczby jednoczesnych aplikacji  
+• lepsze wykorzystanie zasobów  
+• łatwiejsze zarządzanie I/O -bound tasks  
+ wady  
+• złożoność kodu  
+• trudność w debugowaniu  
+• zmiany w architekturze aplikacji  
+o jeśli jedna metoda zostaje zmieniona na asynchroniczną, często inne 
+metody ją wywołujące muszą zostać zmienione  
+• zarządzanie stanem  
+ 
+Task  
+ klasa z przestrzeni nazw System.Threading.Task  
+ jednostka pracy wykonywana asynchronicznie  
+ umożliwia definiowanie operacji równoległych lub asynchronicznych  
+ cechy  
+• asynchroniczne operacje  
+o pozwala na uruchamianie operacji asynchronicznych  
+• zarządzanie zadaniami  
+• integracja z async i await  
+ zalety  
+• łatwość użycia  
+• wsparcie dla kontynuacji  
+• obsługa wyjątków  
+ 
+Proces  
+ instancja programu działająca w swojej własnej, izolowanej przestrzeni 
+pamięci  
+ posiada pełny zestaw własnych zmiennych, zasobów systemowych i pamięci  
+ zalety  
+• izolacja  
+o błędy w jednym procesie nie wpływają na inne  
+• bezpieczeństwo  
+o lepiej zabezpieczone niż wątki  
+ wady  
+• narzut  
+o wymagają więcej czasu i zasobów systemowych  
+• złożoność  
+o komunikacja między procesami jest złożona i woln a 
+ 
+Wątek  
+ najmniejsza jednostka przetwarzania , którą może zaplanować system 
+operacyjny  
+ składnik procesu  
+ dzieli przestrzeń pamięci i zasoby procesu z innymi wątkami  
+ ręczne utworzenie wątku  
+• kroki  
+o Thread thread = new Thread(nazwaMetody)  
+o thread.Start()  
+o thread.Join()  
+• zalety  
+o kontrola nad wykonaniem  
+o precyzyjna optymalizacja  
+• wady  
+o złożoność  
+o bezpieczeństwo  
+o trudność w debugowaniu  
+o zarządzanie zasobami  
+ zalety  
+• wydajność  
+• szybkość  
+ wady  
+• bezpieczeństwo  
+• złożoność debugowania  
+ 
+Pula wątków  
+ zarządzanie i optymalizacja użycia wątków  w aplikacji wielowątkowej  
+ zbiór preinstancjonowanych,  bezczynnych wątków  
+ może być używana do wykonywania wielu zadań bez narzutu związanego z 
+tworzeniem i niszczeniem wątków za każdym razem , gdy potrzebny jest nowy  
+ utworzenie: ThreadPool.Que ueUserWorkItem(nazwaMetody)  
+ zalety  
+o wydajność  
+o zarządzanie zasobami  
+ 
+Operacje CPU -bound  
+ wykonywanie obliczeń wykorzystując jednostkę centralną  (CPU)  
+ wydajność ograniczona przez szybkość CPU  
+ 
+Operacje I /O-bound  
+ oczekuje na zakończenie operacji zewnętrznych  
+ wydajność ograniczona przez szybkość podsystemu I/O  
+ przykłady operacji  
+o odczyt i zapis do dysku  
+o żądania sieciowe  
+o interakcje z bazami danych  
+ 
+Async  
+ słowo kluczowe używane do oznaczania metody asynchronicznej  
+ pozwala na użycie w jej ciele await  
+ umożliwia kompilatorowi przekształcenie metody w maszynę stanów , która 
+może wstrzymywać i wznawiać swoje wykonanie  w punkach, gdzie występuje 
+await  
+ 
+Await  
+ słowo kluczowe używane wewnątrz metody oznaczonej jako async  
+ wskazuje miejsce, w któ rym metoda ma się zatrzymać  do czasu zakończenia 
+oczekiwanego zadania  
+ umożliwia wykonywane operacji asynchronicznej bez blokowania wątku , w 
+którym metoda jest uruc homiona  
+ 
+Transakcja  
+ sekwencja operacji  wykonywanych jako jedna logiczna jednostka pracy  
+ cechy  
+• atomowość  
+• spójność  
+• izolacja  
+• trwałość  
+ rodzaje  
+• transakcj a auto-commit  
+o domyślny tryb transakcji serwera SQL  
+o jeśli instrukcja SQL skończy się pomyślnie to jest zatwierdzana, a 
+modyfikacja w bazie danych staje się trwała  
+• transakcja implicit  
+o serwer SQL bierze odpowiedzialność za rozpoznanie transakcji  
+o serwer czeka na polecenia zatwierdzenia lub wycofania od 
+użytkownika  
+• transakcja explicit  
+o konieczność zdefiniowania punktów początkowych i końcowych 
+transakcji  
+o rozpoczęcie: BEGIN TRANSACTION  
+o zakończenie: COMMIT TRANSACTION lub ROLLBACK TRANSACTION  
+ 
+Wykonanie kilku operacji w ramach jednej transakcji  
+ utworzenie połączenia SqlConnection  
+ rozpoczęcie transakcji SqlTansaction  
+ utworzenie polecenia SqlCommand  
+ przypisanie transakcji do polecenia  
+ wykonanie operacji  
+ zatwierdzenie lub wycofanie transakcji  
+ 
+Typy anonimowe  
+ zapewniają wygodny sposób na enkapsulację zestawu tylko do odczytu 
+właściwości w pojedynczym  obiekcie, bez konieczności uprzedniego 
+definiowania typu  
+ zazwyczaj używane w zapytaniach SELEC T instrukcji LINQ  
+ 
+Język LINQ  
+ dodaje natywne możliwości zapytań danych  
+ wprowadza wzorce do zapytań i aktualizacji danych  
+ może być stosowany do różnych źródeł  
+ składnie  
+• składnia zapytań  
+o zaleta: bardziej zwięzła dla złożonych zapytań  
+• składnia metod  
+o zalety: większa elastyczność, łatw iejsza dla prostych zapytań  
+ 
+ORM  
+ technika programowania używana do konwertowania danych między 
+niezgodnymi systemami w językach programowania obiektowego  
+ pozwala na zapytania i manipulacje danymi z bazy danych za pomocą 
+paradygmatu obiektowego  
+ pomoc w abstrakcyjnym rozwiązywaniu problemów  z wykonywaniem operacja 
+Create, Read, Update, Delete  
+ zalety  
+o produktywność  
+o łatwość otrzymania  
+o przenośność  
+ wady  
+o wydajność  
+o złożoność  
+o kontrola  
+ 
+Podejście Database First  
+ schemat bazy jest tworzony niezależnie od kodu aplikacji  
+ generuje klasy encji i DbContext  
+ projekt bazy danych jest tworzony przez administratora bazy danych  
+ zalety  
+• kontrola nad projektem bazy danych  
+• separacja obowiązków  
+• znajomość  
+o odpowiednie dla zespołów zaznajomionych z tradycyjnym 
+podejściem do rozwoju bazy danych  
+ wady  
+• problemy z synchronizacją  
+o kłopotliwe utrzymanie synchronizacji kodu z bazą danych, 
+szczególnie przy częstych zmianach schematu  
+• mniejsza zwinność  
+• kontrola wersji  
+ użycie  
+• baza danych istnieje  
+• złożone projekty baz danych  
+• projekty napędzane bazą danych  
+• częste zmiany schematu  
+• duże zespoły z podziałem obowiązków  
+ 
+Podejście Code First  
+ utworzenie i zdefiniowanie klas encji i relacji w kodzie aplikacji  
+ wygenerowanie schematu bazy danych za pomocą migracji  
+ struktura bazy danych jest generowana z kodu  
+ zalety  
+• zwinność  
+• kontrola wersji  
+• szybkość rozwoju  
+ wady  
+• mniejsza  kontrola nad projektem bazy danych  
+• szybkość  uczenia  
+o wymaga zrozumienia migracji EF i manipulowania operacjami na 
+bazie danych przez kod  
+ użycie  
+• nowy projekt  
+• projekt wymagający zwinnego rozwoju  
+• ciągła integracja i wdrażanie  
+• prostota i mniejsza złożoność bazy danych  
+ 
+Migracja  
+ mała zmiana w strukturze bazy danych  
+ klasa dziedz icząca po klasie Migration  
+ składowe  
+o metoda Up  
+▪ tworzy tabele  
+o metoda Down  
+▪ usuwa tabele  
+ 
+Adnotacje  
+ atrybuty dodawane bezpośrednio do właściwości lub klas w modelach  
+ definiowanie metadanych , które mogą wpływać na sposób, w jaki EF tworzy 
+schemat bazy danych  
+ np. [Key], [Required]  
+ 
+Metoda OnModelCreating  
+ używana w klasie DbContext  
+ konfigurowanie modeli przy użyciu Fluent API  
+ umożliwia bardziej zaawansowan e konfiguracje, które nie są dostępne za 
+pomocą adnotacji  
+ 
+Interfejs  IEntityTypeConfiguration  
+ przeniesienie konfiguracji modeli do osobnych klas  
+ poprawia czytelność i modularność kodu  
+ klasa z konfiguracjami musi implementować ten interfejs  
+o np. ProductConfiguration : IEntityTypeConfiguration<Product>  
+ 
+Problem lost update  
+ utracone aktualizacje  
+ zapis jednego użytkownika nadpis uje zapis innego  
+ 
+Problem inconsistent reads  
+ jedna transakcja odczytuje dane, które zostają zmienione przez inną 
+transakcje w czasie jej trwania  
+ rozwiązania  
+• blokowanie optymistyczne  
+o sprawdzenie konfliktów przed zatwierdzeniem transakcji  
+• blokowanie pesymistyczne  
+o dane są blokowane natychmiast po uzyskaniu do nich dostępu  
+o blokada jest utrzymywana przez cały czas trwania transakcji  
+o zapobiega modyfikowaniu zablokowanych danych przez inne 
+transakcje  
+ 
+ConcurrencyCheck  
+ właściwości mogą być konfigurowane jako tokeny współbieżności poprzez 
+adnotacje danych  
+ [ConcurrencyCheck] przed polem  
+ 
+Big Ball of Mud 
+ brak pomysłu na podzielenie kodu aplikacji  
+ wiąże się z rosnącym sprzężeniem  
+ aplikacja jest trudna do modyfikacji i rozbudowy  
+ 
+Zestawy odpowiedzialności  
+ Domain (Business Logic) Concerns  
+• dotyczą logiki ściśle związanej z wymaganiami biznesowymi aplikacji  
+ Infrastructure Concerns  
+• wszystkie elementy niezbędne do prawidłowego działania aplikacji, które 
+nie są bezpośrednio związane z logiką biznesową  
+ UI (User Interface) Concerns  
+• związane z interfejsem użytkownika aplikacji  
+• prezentacja danych użytkownikowi i interakcje z nim  
+ 
+Transactional script  
+ wzorzec projektowy  używany do organizacji logiki biznesowej  w aplikacji  
+ miejsce, gdzie zazwyczaj umieszczamy logikę biznesową  
+ odpowiedni dla aplikacji, gzie logika biznesowa jest prosta  i nie wymaga 
+rozbudowanych warstw i abstrakcji  
+ zalety  
+• prostota  
+• łatwość utrzymania  
+• jasne oddzielenie logiki biznesowej  
+• testowalność  
+ wady  
+• brak skalowalności  
+• problemy z ponownym użyciem kodu  
+• zwiększone ryzyko błędów  
+ 
+Model domenowy  
+ stworzenie modelu domeny biznesowej , który obejmuje zadania biznesowe  
+ logika jest stopniowo przenoszona do bogatych modeli obiektów  
+ reprezentuje koncepcyjną strukturę i główne jednostki zaangażowane w logikę 
+biznesową aplikacji  
+ abstrakcja rzeczywistych jednostek i ich relacji w obrębie domeny aplikacji  
+ zalety  
+• zgodność z logiką biznesową  
+• skalowalność i elastyczność  
+• separacja odpowiedzialności  
+• testowalność  
+ wady  
+• złożoność  
+• wymaga intensywnego prze twarzania  
+• trudna integracja z ORM  
+ 
+Unity of Work  
+ wzorzec projektowy  
+ utrzymanie listę obiektów dotkniętych transakcją biznesową  
+ koordynacja zapisu zmian i rozwiązani a problemów współbieżności  
+ pomoc w  zarządzaniu transakcjami, zapewniając, że wszystkie operacje w 
+ramach jednej transakcji zakończą się sukcesem lub porażką razem  
+ koordynacja zmian  w wielu repozytoriach  
+ śledzenie zmian w obiektach  
+ 
+CancellationToken  
+ mechanizm pozwalający na zarządzanie anulowaniem długotrwałych zadań  
+ sygnalizowanie, że operacja powinna zostać anulowana  
+ zalety  
+• łagodna terminacja  
+• poprawiona responsywność  
+• zarządzanie zasobami  
+• unikanie time outów  
+ 
+Middleware  
+ oprogramowanie zamontowan e w potoku aplikacji  
+ obsługa żądań i odpowiedzi  
+ utworzenie  
+• utworzenie klasy middleware  
+• utworzenie konstruktora, który przyjmuje parametr RequestDelegate  
+• utworzenie metody Invoke  
+• rejestracja  w metodzie Configure  
+ 
+Uwierzytelnienie  
+ proces weryfikacji tożsamości użytkownika lub jednostki  
+ metody  
+• hasła  
+• biometria  
+• uwierzytelnienie dwuskładnikowe  
+ uwierzytelnienie w oparciu o bazę danych  
+• wykorzystanie danych przechowywanych w bazie do weryfikacji 
+tożsamości użytkownika  
+ uwierzytelnienie wykorzystujące session ID  
+• serwer tworzy sesję po zalogowaniu użytkownika  
+• sesja jest przechowywana na serwerze  
+• identyfikator sesji jest przesyłany do klienta  
+• identyfikator sesji jest dołączany do żądań  
+• pozwala na identyfikacje użytkownika i jego działań  
+• zalety  
+o prostota  
+o szerokie wsparcie  
+o bezstanowość  
+• wady  
+o bezpieczeństwo  
+o brak wygaśnięcia  
+o doświadczenie użytkownika  
+o ograniczona funkcjonalność  
+ uwierzytelnienie wykorzystujące  acces token (JWT) i refresh token  
+• logowanie użytkownika  
+o użytkownik wysyła żądanie logowania z loginem i hasłem do serwera  
+o serwer weryfikuje poprawność danych użytko wnika w bazie danych  
+• generowanie tokenów  
+o po pomyślnej weryfikacji serwer generuje acces token i refresh token  
+• przekazanie tokenów  
+o serwer przesyła oba tokeny do użytkownika  
+ 
+Acces token  (JWT)  
+ krótko żyjący token  
+ zawiera informacje o użytkowniku i jego uprawnieniach  
+ cyfrowo podpisany  
+ nie jest szyfrowany  
+ elementy  
+• nagłówek  
+• zawartość  
+• podpis  
+ zalety  
+• bezstanowość  
+• użycie w różnych domenach  
+• interoperacyjność  
+• bezpieczeństwo  
+• wydajność  
+• łatwość użycia  
+ wady  
+• brak wygasania  
+• złożoność zarządzania  
+• rozmiar  
+• bezpieczeństwo przechowywania  
+• brak natychmiastowego unieważnienia  
+ 
+Refresh token  
+ długo żyjący token  
+ służy do uzyskiwania nowych acces tokenów  bez konieczności ponownego 
+logowania  
+ 
+Autoryzacja  
+ proces określania co może zrobi uwierzytelniony użytkownik lub jednostka  
+ przyznawanie lub odmawianie dostępu do zasobów, działa ń lub usług na 
+podstawie uprawnienia lub ról  
+ 
+Atrybut [Authorize]  
+ pozwala w łatwy sposób zabezpieczyć wszystkie końcówki  zdefiniowane w 
+danym kontrolerze  
+ wymaga konfiguracji  sposobu uwierzytelniania/autoryzacji  
+ 
+Kodowanie  
+ cel 
+• transformacja danych na inny format przy użyciu schematu, który jest 
+publicznie dostępny  
+• zapewnienie, że dane mogą być używane przez różne systemy  
+ zastosowanie  
+• stosowane w przypadku, gdy dane muszą być przesyłane lub 
+przechowywane w formacie, który jest zgodny z danym protokołem lub 
+systemem  
+ bezpieczeństwo  
+• nie zapewnia bezpieczeństwa  
+• przekształcone dane są łatwe do odczytania i zrozumienia przez każdego, 
+kto zna schemat kodowania  
+ 
+Szyfrowanie  
+ cel 
+• zabezpieczenie danych poprzez przekształc anie ich w nieczytelny format  
+• użycie specjalnego algorytmu i klucza  
+• ochrona danych przed nieautoryzowanym dostępem  
+ zastosowanie  
+• stosowane tam, gdzie wymagane jest bezpieczeństwo  
+ bezpieczeństwo  
+• wysoki poziom bezpieczeństwa  
+• przekształcone dane mogą być odczytane tylko przez osoby posiadające 
+odpowiedni klucz deszyfrujący  
+ 
+Obiekty DTO (Data Trans fer Object)  
+ struktura danych używana do przenoszenia danych między różnymi warstwami 
+aplikacji  
+ minimalizacja  liczby połączeń sieciowych i optymalizacja przepływu danych  
+ charakterystyka  
+• minimalizacja przepływu danych  
+• brak logiki biznesowej  
+• serializacja i deserializac ja 
+• izolacja warstw  
+ 
+Aplikacje MPA  
+ aplikacje internetowe, które składają się  z wielu stron  
+ każda strona jest ładowana oddzielnie  z serwera  w odpowiedzi na działania 
+użytkownika  
+ każda interakcja z aplikacją powoduje przeładowanie strony  
+ logika realizowana po stronie serwera  
+ zalety  
+• lepsze wsparcie dla SEO  
+• prostota  
+• łatwość implementacji  
+• dobre dla stron z dużą ilością treści  
+ wady  
+• przeładowanie strony  
+• wydajność  
+• mała interaktywność  
+ 
+Aplikacje SPA  
+ aplikacje  internetowe, które działają na przeglądarce jako pojedyncza strona  
+ interakcja użytkownika z aplikacją odbywa się bez przeładowania  całej strony  
+ części strony są dynamicznie aktualizowane  
+ logika po stronie klienta  
+ technologie i koncepcje  
+• AJAX  
+• JavaScript Framework  
+• Client-Side Rendering  
+ zalety  
+• interaktywność  
+• doświadczenie użytkownika  
+• dobre do tworzenia aplikacji mobilnych  
+• wydajność  
+ wady  
+• trudności z SEO  
+• złożoność  
+• początkowy czas ładowania  
+ 
+Klient cienki  
+ większość logiki po stronie serwera  
+ kod klienta składa się głównie z HTML, CSS i minimalnie JavaScript  
+ interakcja powoduje pełne przeładowanie strony  
+ MPA  
+ 
+Klient gruby  
+ większość logiki po stronie klienta  
+ głównie JavaScript  
+ dynamiczne aktualizacje bez przeładowania całej strony  
+ SPA  
+ 
+ASP.NET MVC  
+ wzorzec projektowy  
+ zapewnia funkcje do budowy API webowych i aplikacji webowych  
+ sprawdza testowalność  
+ 
+Razor  
+ silnik widoków  
+ tworzenie widoków , które są renderowane po stronie serwera i przesyłane do 
+klienta  
+ dynamiczne generowanie HTML  
+ łatwe łączenie dynamicznych elementów C# ze statycznym HTML  
+ 
+ViewBag  
+ dynamiczny obiekt  
+ umożliwia łatwe przekazywanie danyc h do widoku  
+ zalety  
+• prostota i elastyczność  
+• brak potrzeby tworzenia klas modeli  
+ wady  
+• brak sprawdzania typów w czasie kompilacji  
+• trudniejsza  konserwacja  
+• ograniczone wsparcie Itellisense  
+ 
+Widoki silnie typowane  
+ sposób przekazywania danych do widoku  za pomocą klas modeli  
+ zalety  
+• sprawdzanie typów w czasie kompilacji  
+• wsparcie Intellisense  
+• jasny i łatwy do utrzymania kod  
+• bezpieczeństwo typów  
+ wady  
+• większy narzut  
+• mniejsza elastyczność  
+• początkowa trudność uczenia  
+ 
+Formularz HTML  
+ umożliwia użytkownikowi przesyłani e danych na serwer  
+ zapewnia przyjazny interfejs  
+ działanie  
+• gdy użytkownik przesyła formularz, przeglądarka wysyła dane na serwer za 
+pomocą żądań HTTP  
+• serwer przetwarza  dane  
+• serwer zwraca odpowiedź  
+ podstawa aplikacji webowych  
+ 
+Walidacja klienta  
+ odbywa się w przeglądarce użytkownika  
+ zalety  
+• natychmiastowa informacja  zwrotna  
+• zmniejszenie obciążenia serwera  
+ wady  
+• bezpieczeństwo  
+• niezawodność  
+ 
+Walidacja serwerowa  
+ odbywa się na serwerze po przesłaniu danych przez użytkownika  
+ zalety  
+o bezpieczeństwo  
+o integracja danych  
+ wady  
+o brak natychmiastowej informacji zwrotnej  
+o odciążenie serwera  
+ 
+WebAssembly  
+ nowy typ kodu  
+ może być uruchamiany w nowoczesnych przeglądarkach  internetowych  
+ nie jest przeznaczony do pisania ręcznego  
+ zaprojektowany  jako skuteczny cel kompilacji dla języków źródłowych  
+ umożliwia uruchamianie kodu napisanego w wielu j ęzykach na webie  
+ cele  
+• szybki, wydajny i przenośny  
+• odczytywalność i debugowalność  
+• bezpieczeństwo  
+• nie niszczący sieci  
+ elementy  
+• maszyna wirtualna  
+• zestaw Web API  
+ zalety  
+• wysoka wydajność  
+• przenośność  
+• bezpieczeństwo  
+• kompatybilność  
+• otwartość i standaryzacja  
+ wady  
+• ograniczenia przeglądarek  
+• problemy z alokacją pamięci  
+• debugowanie i narzędzia  
+• potencjalne zagrożenia bezpieczeństwa  
+ 
+Blazor  
+ framework webowy  
+ umożliwia tworzenie interaktywnych interfejsów  użytkownika  
+ tworzenie bogatych, nowoczesnych  aplikacji webowych, zapewniających 
+środowisko dla rozwoju po stronie serwera i klienta  
+ funkcje  
+o jeden język  
+o architektura oparta na komponentach  
+o wsparcie dla WebAssembly  
+o blazor po stronie serwera  
+o integracja z ekosystemem  .NET  
+ 
+Blazor Client Side  
+ uruchamia się w przeglądarce  
+ kiedy użytkownik  otwiera stronę lub aplikację webową cały kod związany z logiką 
+klienta jest pobierana  
+ zalety  
+• aplikacje mogą działać w trybie offline po ich pobraniu  
+• aktualizowanie po połączeniu z siecią  
+• szybkie ładowanie  
+• wykorzystanie zasobów klienta  
+ wady  
+• wymaga kompatybilnego sprzętu i oprogramowania po stronie klienta  
+• długi czas ładowania  
+• ograniczona kompatybilność i debugowanie narzędzi i środowiska 
+uruchomieniowego .NET  
+ 
+Blazor Server  Side  
+ działa na serwerze  
+ zmiana lub zdarzenie po stronie klienta zostanie przesłane na serwer  
+ serwer przetwarza zmiany i aktualizuje interfejs użytkownika po stronie klienta  
+ renderowanie interfejsu użytkownika odbywa się po stronie serwera  
+ zalety  
+• szybkie ładowanie  
+• wykorzystanie pełnych możliwości serwera  
+• działa ze starszymi  wersjami przeglądarek  
+• bezpieczeństwo  
+ wady  
+• wymaga serwera ASP.NET Core  
+• niezbędne jest aktywne połączenie z serwerem  
+• większe opóźnienia  
+ 
+Testy integracyjne  
+ weryfikacja czy różne komponenty systemu działają razem zgodnie z 
+oczekiwaniami  
+ sprawdzają interakcje między różnymi modułami, usługami lub warstwami 
+aplikacji  
+ zazwyczaj większe i bardziej złożone  
+ obejmują wiele części aplikacji i rzeczywiste lub symulowane zewnętrzne 
+systemy  
+ identyfikują  problemy, które mogą nie być widoczne podczas  testowania 
+komponentów w izolacji  
+ zalety  
+• kompleksowe pokrycie  
+• wykrywanie problemów interakcji  
+• realistyczne środowisko  
+• pewność stabilności systemu  
+ wady  
+• złożoność  
+• wolniejsze  wykonanie  
+• trudniejsze rozwiązywanie problemów  
+• wymagające zasoby  
+ 
+Obiekty testowe  
+ różnego rodzaju specjalnie przygotowane obiekty używane w testowaniu  
+ wspomagają proces t estowania  
+ zastępują rzeczywiste komponenty systemu  
+ rodzaje  
+• dummy  
+• stub  
+• mock  
+• spy 
+• fake  
+ 
+Dummy  
+ używany w testach jednostkowych  
+ przekazywany ale nigdy faktycznie  nie używany  
+ służy do wypełniania  list parametrów lub spełniania  sygnatur metod funkcji i 
+klas  
+ umożliwia uruchomienie testu bez potrzeby implementacji lub wywoływania 
+rzeczywistych funkcjonalności, które są nieistotne dla konkretnego przypadku 
+testowego  
+ 
+Stub  
+ zaawansowany obiekt testowy  
+ dostarcza wcześniej zdefiniowane odpowiedzi na konkretne wywoływania 
+testowania  
+ zachowanie twardo zakodowane i upr oszczone  
+ używany  do symulowania komponentów, z którymi moduł testowany się 
+integruje  
+ zapewnia, że środowisko testowe jest kontrolowane i przewidywalne  
+ 
+Mock  
+ używany w testach jednostkowych  
+ weryfikuje zachodzenie interakcji  
+ może być zaprogramowany z oczekiwaniami  
+ rejestruje jak informacje jak był wywoływany  
+ weryfikacja czy system testowany współdziała ze swoimi zależnościami 
+poprawnie  
+ 
+Spy  
+ rodzaj podwójnego testu  
+ rejestruje interakcje między systemem testowanym a samym spyem  
+ rejestruje wywołania metod i ich parametry  
+ weryfikacja skutków ubocznych operacji  
+ 
+Fake  
+ rodzaj podwójnego testu  
+ posiada działające implementacje, ale są one uproszczone lub nieodpowiednie  
+ zastępuj e złożone lub wolne rzeczywiste komponenty  
+ przyśpiesza testy  
+ zdolność  do konfigu rowania oczekiwanych zachowań  </pre>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
